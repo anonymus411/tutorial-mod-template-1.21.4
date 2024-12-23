@@ -18,7 +18,6 @@ public class ModItems {
             .registryKey(RegistryKey.of(RegistryKeys.ITEM, Identifier.of(TutorialMod.MOD_ID, "lilyfish")))));
 
 
-
     private static Item registerItem(String name, Item item) {
         return Registry.register(Registries.ITEM, Identifier.of(TutorialMod.MOD_ID, name), item);
     }
@@ -31,6 +30,9 @@ public class ModItems {
             entries.add(LILYFISH);
 
         });
+
+    }
+
+    public static void init() {
     }
 }
-
