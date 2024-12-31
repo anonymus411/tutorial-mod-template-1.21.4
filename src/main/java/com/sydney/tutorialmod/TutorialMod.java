@@ -1,5 +1,6 @@
 package com.sydney.tutorialmod;
 
+import com.sydney.tutorialmod.block.ModBlocks;
 import com.sydney.tutorialmod.item.ModItemGroups;
 import com.sydney.tutorialmod.item.ModItems;
 import net.fabricmc.api.ModInitializer;
@@ -16,6 +17,7 @@ public class TutorialMod implements ModInitializer {
 	public void onInitialize() {
 
 		ModItems.registerModItems();
+		ModBlocks.registerModBlocks();
 		ModItemGroups.registerItemGroups();
 
 	}

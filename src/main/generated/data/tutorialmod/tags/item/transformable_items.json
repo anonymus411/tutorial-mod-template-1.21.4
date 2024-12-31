@@ -1,6 +1,9 @@
 {
   "values": [
     "tutorialmod:pink_garnet",
-    "tutorialmod:lilyfish"
+    "tutorialmod:lilyfish",
+    "minecraft:coal",
+    "minecraft:stick",
+    "minecraft:apple"
   ]
 }

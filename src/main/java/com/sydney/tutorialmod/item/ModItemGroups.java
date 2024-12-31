@@ -17,6 +17,10 @@ public class ModItemGroups {
                     .entries((displayContext, entries) -> {
                         entries.add(ModItems.PINK_GARNET);
                         entries.add(ModItems.LILYFISH);
+                        entries.add(ModItems.TOMATO);
+                        entries.add(ModItems.TOMATO_SEEDS);
+                        entries.add(ModItems.CAULIFLOWER);
+                        entries.add(ModItems.CAULIFLOWER_SEEDS);
 
 
 
