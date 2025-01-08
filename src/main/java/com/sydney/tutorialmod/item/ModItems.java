@@ -19,6 +19,26 @@ public class ModItems {
             .food(ModFoodComponents.CAULIFLOWER)));
 
 
+    public static final Item SWEETBERRY_CUPCAKE = registerItem("sweetberry_cupcake", new Item(new Item.Settings()
+            .registryKey(RegistryKey.of(RegistryKeys.ITEM, Identifier.of(TutorialMod.MOD_ID, "sweetberry_cupcake")))
+            .food(ModFoodComponents.SWEETBERRY_CUPCAKE)));
+
+
+
+
+
+
+
+
+    public static final Item CAKE_DOUGH = registerItem("cake_dough", new Item(new Item.Settings()
+            .registryKey(RegistryKey.of(RegistryKeys.ITEM, Identifier.of(TutorialMod.MOD_ID, "cake_dough")))));
+
+    public static final Item SWEETBERRY_JAM = registerItem("sweetberry_jam", new Item(new Item.Settings()
+            .registryKey(RegistryKey.of(RegistryKeys.ITEM, Identifier.of(TutorialMod.MOD_ID, "sweetberry_jam")))));
+
+    public static final Item JAR = registerItem("jar", new Item(new Item.Settings()
+            .registryKey(RegistryKey.of(RegistryKeys.ITEM, Identifier.of(TutorialMod.MOD_ID, "jar")))));
+
 
     public static final Item PINK_GARNET = registerItem("pink_garnet", new Item(new Item.Settings()
             .registryKey(RegistryKey.of(RegistryKeys.ITEM, Identifier.of(TutorialMod.MOD_ID, "pink_garnet")))));
@@ -36,7 +56,7 @@ public class ModItems {
                     .registryKey(RegistryKey.of(RegistryKeys.ITEM, Identifier.of(TutorialMod.MOD_ID, "tomato")))));
 
     public static final Item CAULIFLOWER_SEEDS = registerItem("cauliflower_seeds",
-            new BlockItem(ModBlocks.CAULIFLOWER_CROP, new Item.Settings()
+            new BlockItem(ModBlocks.CAULIFLOWER, new Item.Settings()
                     .registryKey(RegistryKey.of(RegistryKeys.ITEM, Identifier.of(TutorialMod.MOD_ID, "cauliflower_seeds")))));
 
 

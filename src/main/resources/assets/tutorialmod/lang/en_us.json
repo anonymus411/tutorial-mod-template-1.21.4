@@ -4,5 +4,20 @@
   "item.tutorialmod.tomato": "Tomato",
   "item.tutorialmod.tomato_seeds": "Tomato Seeds",
   "item.tutorialmod.cauliflower_seeds": "Cauliflower Seeds",
-  "item.tutorialmod.cauliflower": "Cauliflower"
+  "item.tutorialmod.cauliflower": "Cauliflower",
+
+  "block.tutorialmod.cauliflower": "Cauliflower",
+
+  "item.tutorialmod.cake_dough": "Cake Dough",
+  "item.tutorialmod.sweetberry_jam": "Sweetberry Jam",
+  "item.tutorialmod.jar": "Jar",
+  "item.tutorialmod.sweetberry_cupcake": "Sweetberry Cupcake",
+
+
+
+
+  "block.tutorialmod.oak_glass_trapdoor": "Oak Glass Trapdoor",
+  "block.tutorialmod.cherry_glass_trapdoor": "Cherry Glass Trapdoor",
+  "block.tutorialmod.cherry_barn_trapdoor": "Cherry Barn Trapdoor"
+
 }

@@ -1,7 +1,7 @@
 package com.sydney.tutorialmod.datagen;
 
 import com.sydney.tutorialmod.block.ModBlocks;
-import com.sydney.tutorialmod.block.custom.CauliflowerCropBlock;
+import com.sydney.tutorialmod.block.custom.Cauliflower;
 import com.sydney.tutorialmod.block.custom.Tomato;
 import com.sydney.tutorialmod.item.ModItems;
 import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
@@ -50,9 +50,9 @@ public class ModLootTableProvider extends FabricBlockLootTableProvider {
 
 
 
-        BlockStatePropertyLootCondition.Builder builder2 = BlockStatePropertyLootCondition.builder(ModBlocks.CAULIFLOWER_CROP)
-                .properties(StatePredicate.Builder.create().exactMatch(CauliflowerCropBlock.AGE, CauliflowerCropBlock.MAX_AGE));
-        this.addDrop(ModBlocks.CAULIFLOWER_CROP, this.cropDrops(ModBlocks.CAULIFLOWER_CROP, ModItems.CAULIFLOWER, ModItems.CAULIFLOWER_SEEDS, builder2));
+        BlockStatePropertyLootCondition.Builder builder2 = BlockStatePropertyLootCondition.builder(ModBlocks.CAULIFLOWER)
+                .properties(StatePredicate.Builder.create().exactMatch(Cauliflower.AGE, Cauliflower.MAX_AGE));
+        this.addDrop(ModBlocks.CAULIFLOWER, this.cropDrops(ModBlocks.CAULIFLOWER, ModItems.CAULIFLOWER, ModItems.CAULIFLOWER_SEEDS, builder2));
     }
 
     public LootTable.Builder multipleOreDrops(Block drop, Item item, float minDrops, float maxDrops) {

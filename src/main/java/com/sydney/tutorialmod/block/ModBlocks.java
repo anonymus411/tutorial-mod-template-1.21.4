@@ -1,14 +1,13 @@
 package com.sydney.tutorialmod.block;
 
 import com.sydney.tutorialmod.TutorialMod;
-import com.sydney.tutorialmod.block.custom.CauliflowerCropBlock;
+import com.sydney.tutorialmod.block.custom.Cauliflower;
 import com.sydney.tutorialmod.block.custom.Tomato;
+import com.sydney.tutorialmod.sound.ModSounds;
 import net.fabricmc.fabric.api.itemgroup.v1.ItemGroupEvents;
-import net.minecraft.block.AbstractBlock;
-import net.minecraft.block.Block;
-import net.minecraft.block.Blocks;
-import net.minecraft.block.MapColor;
+import net.minecraft.block.*;
 import net.minecraft.block.piston.PistonBehavior;
+import net.minecraft.client.sound.Sound;
 import net.minecraft.item.BlockItem;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemGroups;
@@ -26,9 +25,27 @@ public class ModBlocks {
             new Tomato(AbstractBlock.Settings.copy(Blocks.SWEET_BERRY_BUSH)
                     .registryKey(RegistryKey.of(RegistryKeys.BLOCK, Identifier.of(TutorialMod.MOD_ID, "tomato")))));
 
-    public static final Block CAULIFLOWER_CROP = registerBlockWithoutBlockItem("cauliflower_crop",
-            new CauliflowerCropBlock(AbstractBlock.Settings.create().registryKey(RegistryKey.of(RegistryKeys.BLOCK, Identifier.of(TutorialMod.MOD_ID, "cauliflower_crop"))).noCollision()
+    public static final Block CAULIFLOWER= registerBlockWithoutBlockItem("cauliflower",
+            new Cauliflower(AbstractBlock.Settings.create().registryKey(RegistryKey.of(RegistryKeys.BLOCK, Identifier.of(TutorialMod.MOD_ID, "cauliflower"))).noCollision()
                     .ticksRandomly().breakInstantly().sounds(BlockSoundGroup.CROP).pistonBehavior(PistonBehavior.DESTROY).mapColor(MapColor.DARK_GREEN)));
+
+
+
+
+
+
+    public static final Block OAK_GlASS_TRAPDOOR = registerBlock("oak_glass_trapdoor",
+            new TrapdoorBlock(BlockSetType.OAK, AbstractBlock.Settings.create().registryKey(RegistryKey.of(RegistryKeys.BLOCK, Identifier.of(TutorialMod.MOD_ID, "oak_glass_trapdoor")))
+                    .strength(2f).requiresTool().nonOpaque()));
+    public static final Block CHERRY_GlASS_TRAPDOOR = registerBlock("cherry_glass_trapdoor",
+            new TrapdoorBlock(BlockSetType.CHERRY, AbstractBlock.Settings.create().registryKey(RegistryKey.of(RegistryKeys.BLOCK, Identifier.of(TutorialMod.MOD_ID, "cherry_glass_trapdoor")))
+                    .strength(2f).requiresTool().nonOpaque()));
+
+
+
+    public static final Block CHERRY_BARN_TRAPDOOR = registerBlock("cherry_barn_trapdoor",
+            new TrapdoorBlock(BlockSetType.CHERRY, AbstractBlock.Settings.create().registryKey(RegistryKey.of(RegistryKeys.BLOCK, Identifier.of(TutorialMod.MOD_ID, "cherry_glass_trapdoor")))
+                    .strength(2f).requiresTool().nonOpaque()));
 
 
     private static Block registerBlockWithoutBlockItem(String name, Block block) {
