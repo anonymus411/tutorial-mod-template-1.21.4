@@ -1,0 +1,7 @@
+// 1.21.4	-999999999-01-01T00:00:00	Tutorial Mod/Tutorial Mod Recipes
+bb6c894bd9a12aa6e4b81cd4cb2ab1916733f404 data/tutorialmod/advancement/recipes/building_blocks/cherry_glass_trapdoor.json
+2cf4d0528e814700a4ab802bd3e8e01d5ca74c37 data/tutorialmod/advancement/recipes/building_blocks/oak_glass_trapdoor.json
+2b35db8a4642a1630e04dedec7f6b179176b81e0 data/tutorialmod/advancement/recipes/misc/cake_dough.json
+ecf84fa331aa4ba061ac4dec4c567eb685cc2889 data/tutorialmod/recipe/cake_dough.json
+9bd4c752859376eb557d825c72274fd7c2a02f1d data/tutorialmod/recipe/cherry_glass_trapdoor.json
+7d946e932a53488dc94aced6dd8b19065693c17e data/tutorialmod/recipe/oak_glass_trapdoor.json

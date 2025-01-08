@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "building",
+  "key": {
+    "A": "minecraft:cherry_planks",
+    "B": "minecraft:glass_pane"
+  },
+  "pattern": [
+    "ABA",
+    "ABA",
+    "   "
+  ],
+  "result": {
+    "count": 1,
+    "id": "tutorialmod:cherry_glass_trapdoor"
+  }
+}
