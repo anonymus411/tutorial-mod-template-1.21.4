@@ -12,6 +12,7 @@ import net.minecraft.item.Item;
 import net.minecraft.item.Items;
 import net.minecraft.recipe.book.RecipeCategory;
 import net.minecraft.registry.Registries;
+import net.minecraft.registry.RegistryKeys;
 import net.minecraft.registry.RegistryWrapper;
 import net.minecraft.registry.tag.ItemTags;
 
@@ -100,16 +101,6 @@ public class ModRecipeProvider extends FabricRecipeProvider {
 
 
 
-
-
-                ShapedRecipeJsonBuilder.create(Registries.ITEM,RecipeCategory.MISC,ModItems.JAR,2)
-                        .pattern("A")
-                        .pattern("B")
-                        .pattern("B")
-                        .input('A', ItemTags.WOODEN_SLABS)
-                        .input('B',Items.GLASS_PANE)
-                        .criterion("has_wooden_slab",conditionsFromTag(ItemTags.WOODEN_SLABS))
-                        .offerTo(exporter);
             }
 
 

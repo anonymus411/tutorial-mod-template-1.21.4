@@ -2,6 +2,7 @@ package com.sydney.tutorialmod.item;
 
 import com.sydney.tutorialmod.TutorialMod;
 import com.sydney.tutorialmod.block.ModBlocks;
+import com.sydney.tutorialmod.block.Wood;
 import net.fabricmc.fabric.api.itemgroup.v1.FabricItemGroup;
 import net.minecraft.item.ItemGroup;
 import net.minecraft.item.ItemStack;
@@ -25,6 +26,7 @@ public class ModItemGroups {
                         entries.add(ModItems.CAKE_DOUGH);
                         entries.add(ModItems.SWEETBERRY_JAM);
                         entries.add(ModItems.JAR);
+
                     }).build());
 
     public static final ItemGroup PINK_GARNET_BLOCKS_GROUP = Registry.register(Registries.ITEM_GROUP,
@@ -34,7 +36,12 @@ public class ModItemGroups {
                                         .entries((displayContext, entries) -> {
                                             entries.add(ModBlocks.OAK_GlASS_TRAPDOOR);
                                             entries.add(ModBlocks.CHERRY_GlASS_TRAPDOOR);
-
+entries.add(Wood.IRONWOOD_LEAVES);
+entries.add(Wood.IRONWOOD_WOOD);
+entries.add(Wood.STRIPPED_IRONWOOD_LOG);
+entries.add(Wood.IRONWOOD_LOG);
+entries.add(Wood.IRONWOOD_PLANKS);
+entries.add(Wood.IRONWOOD_SAPLING);
 
 
 

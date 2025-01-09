@@ -3,6 +3,7 @@ package com.sydney.tutorialmod.item;
 import com.sydney.tutorialmod.TutorialMod;
 import com.sydney.tutorialmod.block.ModBlocks;
 import net.fabricmc.fabric.api.itemgroup.v1.ItemGroupEvents;
+import net.minecraft.block.LanternBlock;
 import net.minecraft.item.BlockItem;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemGroups;
@@ -38,6 +39,8 @@ public class ModItems {
 
     public static final Item JAR = registerItem("jar", new Item(new Item.Settings()
             .registryKey(RegistryKey.of(RegistryKeys.ITEM, Identifier.of(TutorialMod.MOD_ID, "jar")))));
+
+
 
 
     public static final Item PINK_GARNET = registerItem("pink_garnet", new Item(new Item.Settings()

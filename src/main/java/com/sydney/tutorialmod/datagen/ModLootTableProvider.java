@@ -1,6 +1,7 @@
 package com.sydney.tutorialmod.datagen;
 
 import com.sydney.tutorialmod.block.ModBlocks;
+import com.sydney.tutorialmod.block.Wood;
 import com.sydney.tutorialmod.block.custom.Cauliflower;
 import com.sydney.tutorialmod.block.custom.Tomato;
 import com.sydney.tutorialmod.item.ModItems;
@@ -47,6 +48,18 @@ public class ModLootTableProvider extends FabricBlockLootTableProvider {
                                 ).with(ItemEntry.builder(ModItems.TOMATO))
                                 .apply(SetCountLootFunction.builder(UniformLootNumberProvider.create(1.0F, 2.0F)))
                                 .apply(ApplyBonusLootFunction.uniformBonusCount(impl.getOrThrow(Enchantments.FORTUNE))))));
+
+
+
+        addDrop(Wood.IRONWOOD_LOG);
+        addDrop(Wood.IRONWOOD_WOOD);
+        addDrop(Wood.STRIPPED_IRONWOOD_LOG);
+        addDrop(Wood.IRONWOOD_PLANKS);
+        addDrop(Wood.IRONWOOD_SAPLING);
+
+        addDrop(Wood.IRONWOOD_LEAVES, leavesDrops(Wood.IRONWOOD_LEAVES, Wood.IRONWOOD_SAPLING, 0.0625f));
+
+
 
 
 

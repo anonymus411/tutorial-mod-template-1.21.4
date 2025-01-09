@@ -14,10 +14,23 @@
   "item.tutorialmod.sweetberry_cupcake": "Sweetberry Cupcake",
 
 
+  "item.tutorialmod.green_glow_bottle": "Green Glow Bottle",
+
+
 
 
   "block.tutorialmod.oak_glass_trapdoor": "Oak Glass Trapdoor",
   "block.tutorialmod.cherry_glass_trapdoor": "Cherry Glass Trapdoor",
-  "block.tutorialmod.cherry_barn_trapdoor": "Cherry Barn Trapdoor"
+  "block.tutorialmod.cherry_barn_trapdoor": "Cherry Barn Trapdoor",
+  "block.tutorialmod.green_glow_bottle": "Green Glow Bottle",
 
+
+
+
+  "block.tutorialmod.ironwood_log": "Ironwood  Log",
+  "block.tutorialmod.ironwood_wood": "Ironwood  Wood",
+  "block.tutorialmod.stripped_ironwood_log": "Stripped Ironwood  Log",
+  "block.tutorialmod.ironwood_planks": "Ironwood  Planks",
+  "block.tutorialmod.ironwood_leaves": "Ironwood  Leaves",
+  "block.tutorialmod.ironwood_sapling": "Ironwood Sapling"
 }

@@ -23,6 +23,7 @@ public class ModBlockTagProvider extends FabricTagProvider.BlockTagProvider {
         getOrCreateTagBuilder(BlockTags.BARN_TRAPDOORS)
                 .add(ModBlocks.CHERRY_BARN_TRAPDOOR);
 
+
         }
     }
 
