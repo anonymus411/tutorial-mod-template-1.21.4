@@ -1,13 +1,13 @@
 package com.sydney.tutorialmod.datagen;
 
 import com.sydney.tutorialmod.block.ModBlocks;
-import com.sydney.tutorialmod.block.Wood;
 import com.sydney.tutorialmod.block.custom.Cauliflower;
+import com.sydney.tutorialmod.block.custom.Pink_Garnet_Ore;
+import com.sydney.tutorialmod.block.custom.Silt;
 import com.sydney.tutorialmod.block.custom.Tomato;
 import com.sydney.tutorialmod.item.ModItems;
 import net.fabricmc.fabric.api.client.datagen.v1.provider.FabricModelProvider;
 import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
-import net.minecraft.block.BambooShootBlock;
 import net.minecraft.client.data.BlockStateModelGenerator;
 import net.minecraft.client.data.ItemModelGenerator;
 import net.minecraft.client.data.Models;
@@ -33,17 +33,17 @@ blockStateModelGenerator.registerTrapdoor(ModBlocks.CHERRY_GlASS_TRAPDOOR);
 blockStateModelGenerator.registerTrapdoor(ModBlocks.CHERRY_BARN_TRAPDOOR);
 
 
-        blockStateModelGenerator.registerLog(Wood.IRONWOOD_LOG).log(Wood.IRONWOOD_WOOD);
-        blockStateModelGenerator.registerLog(Wood.STRIPPED_IRONWOOD_LOG).log(Wood.IRONWOOD_LOG);
+//GARNET
 
-        blockStateModelGenerator.registerSimpleCubeAll(Wood.IRONWOOD_PLANKS);
-        blockStateModelGenerator.registerSingleton(Wood.IRONWOOD_LEAVES, TexturedModel.LEAVES);
-        blockStateModelGenerator.registerTintableCrossBlockState(Wood.IRONWOOD_SAPLING, BlockStateModelGenerator.CrossType.NOT_TINTED);
+blockStateModelGenerator.registerSimpleCubeAll(Pink_Garnet_Ore.PINK_GARNET_DEEPSLATE_ORE);
+blockStateModelGenerator.registerSimpleCubeAll(Pink_Garnet_Ore.PINK_GARNET_ORE);
 
+blockStateModelGenerator.registerSimpleCubeAll(Pink_Garnet_Ore.PINK_GARNET_BLOCK);
+blockStateModelGenerator.registerSimpleCubeAll(Pink_Garnet_Ore.RAW_PINK_GARNET_BLOCK);
 
+//IRONWOOD
 
-
-
+        blockStateModelGenerator.registerSimpleCubeAll(Silt.SILT);
 
 
 
@@ -58,6 +58,7 @@ blockStateModelGenerator.registerTrapdoor(ModBlocks.CHERRY_BARN_TRAPDOOR);
     itemModelGenerator.register(ModItems.CAKE_DOUGH,Models.GENERATED);
     itemModelGenerator.register(ModItems.SWEETBERRY_JAM,Models.GENERATED);
     itemModelGenerator.register(ModItems.JAR,Models.GENERATED);
-        itemModelGenerator.register(Wood.IRONWOOD_SAPLING.asItem(), Models.GENERATED);
+    itemModelGenerator.register(ModItems.RAW_PINK_GARNET,Models.GENERATED);
+
     }
 }

@@ -1,9 +1,11 @@
 package com.sydney.tutorialmod;
 
 import com.sydney.tutorialmod.block.ModBlocks;
-import com.sydney.tutorialmod.block.Wood;
+import com.sydney.tutorialmod.block.custom.Pink_Garnet_Ore;
 import com.sydney.tutorialmod.item.ModItemGroups;
 import com.sydney.tutorialmod.item.ModItems;
+import com.sydney.tutorialmod.sound.ModSounds;
+import com.sydney.tutorialmod.world.gen.ModWorldGeneration;
 import net.fabricmc.api.ModInitializer;
 
 import net.fabricmc.fabric.api.registry.StrippableBlockRegistry;
@@ -21,11 +23,13 @@ public class TutorialMod implements ModInitializer {
 		ModItems.registerModItems();
 		ModBlocks.registerModBlocks();
 		ModItemGroups.registerItemGroups();
-		Wood.registerModBlocks();
+
+		Pink_Garnet_Ore.registerModBlocks();
+		ModWorldGeneration.generateModWorldGen();
+		ModSounds.registerSounds();
 
 
 
-		StrippableBlockRegistry.register(Wood.IRONWOOD_LOG, Wood.STRIPPED_IRONWOOD_LOG);
 
 
 

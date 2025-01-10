@@ -1,6 +1,7 @@
 package com.sydney.tutorialmod.datagen;
 
 import com.sydney.tutorialmod.block.ModBlocks;
+import com.sydney.tutorialmod.block.custom.Pink_Garnet_Ore;
 import com.sydney.tutorialmod.item.ModItems;
 import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
 import net.fabricmc.fabric.api.datagen.v1.provider.FabricRecipeProvider;
@@ -9,6 +10,8 @@ import net.minecraft.data.recipe.RecipeGenerator;
 import net.minecraft.data.recipe.ShapedRecipeJsonBuilder;
 import net.minecraft.data.recipe.ShapelessRecipeJsonBuilder;
 import net.minecraft.item.Item;
+import net.minecraft.item.ItemConvertible;
+import net.minecraft.item.ItemStack;
 import net.minecraft.item.Items;
 import net.minecraft.recipe.book.RecipeCategory;
 import net.minecraft.registry.Registries;
@@ -16,6 +19,7 @@ import net.minecraft.registry.RegistryKeys;
 import net.minecraft.registry.RegistryWrapper;
 import net.minecraft.registry.tag.ItemTags;
 
+import java.util.List;
 import java.util.concurrent.CompletableFuture;
 
 public class ModRecipeProvider extends FabricRecipeProvider {
@@ -29,6 +33,36 @@ public class ModRecipeProvider extends FabricRecipeProvider {
 
             @Override
             public void generate() {
+
+            }
+
+            public void generate(RecipeExporter exporter) {
+                List<ItemConvertible> PINK_GARNET_SMELTABLES = List.of(ModItems.RAW_PINK_GARNET, Pink_Garnet_Ore.PINK_GARNET_ORE,
+                        Pink_Garnet_Ore.PINK_GARNET_DEEPSLATE_ORE);
+
+
+
+
+                offerReversibleCompactingRecipes(RecipeCategory.BUILDING_BLOCKS, ModItems.PINK_GARNET, RecipeCategory.DECORATIONS, Pink_Garnet_Ore.PINK_GARNET_BLOCK);
+
+                ShapedRecipeJsonBuilder.create(Registries.ITEM,RecipeCategory.BUILDING_BLOCKS,Pink_Garnet_Ore.RAW_PINK_GARNET_BLOCK,2)
+                        .pattern("RRR")
+                        .pattern("RRR")
+                        .pattern("RRR")
+                        .input('R', ModItems.RAW_PINK_GARNET)
+                        .criterion(hasItem(ModItems.RAW_PINK_GARNET), conditionsFromItem(ModItems.RAW_PINK_GARNET))
+                        .offerTo(exporter);
+
+                createShapeless(RecipeCategory.MISC, ModItems.RAW_PINK_GARNET, 9)
+                        .input(Pink_Garnet_Ore.RAW_PINK_GARNET_BLOCK)
+                        .criterion(hasItem(Pink_Garnet_Ore.RAW_PINK_GARNET_BLOCK), conditionsFromItem(Pink_Garnet_Ore.RAW_PINK_GARNET_BLOCK))
+                        .offerTo(exporter);
+
+
+
+
+
+
 
 
                 ShapedRecipeJsonBuilder.create(Registries.ITEM,RecipeCategory.BUILDING_BLOCKS,ModBlocks.OAK_GlASS_TRAPDOOR,2)

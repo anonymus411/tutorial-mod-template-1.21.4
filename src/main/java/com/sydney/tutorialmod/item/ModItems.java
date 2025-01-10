@@ -41,10 +41,13 @@ public class ModItems {
             .registryKey(RegistryKey.of(RegistryKeys.ITEM, Identifier.of(TutorialMod.MOD_ID, "jar")))));
 
 
-
+    public static final Item RAW_PINK_GARNET = registerItem("raw_pink_garnet", new Item(new Item.Settings()
+            .registryKey(RegistryKey.of(RegistryKeys.ITEM, Identifier.of(TutorialMod.MOD_ID, "raw_pink_garnet")))));
 
     public static final Item PINK_GARNET = registerItem("pink_garnet", new Item(new Item.Settings()
             .registryKey(RegistryKey.of(RegistryKeys.ITEM, Identifier.of(TutorialMod.MOD_ID, "pink_garnet")))));
+
+
 
     public static final Item LILYFISH = registerItem("lilyfish", new Item(new Item.Settings()
             .registryKey(RegistryKey.of(RegistryKeys.ITEM, Identifier.of(TutorialMod.MOD_ID, "lilyfish")))));

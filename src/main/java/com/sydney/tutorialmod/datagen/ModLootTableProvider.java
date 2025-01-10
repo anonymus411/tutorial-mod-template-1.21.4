@@ -1,8 +1,8 @@
 package com.sydney.tutorialmod.datagen;
 
 import com.sydney.tutorialmod.block.ModBlocks;
-import com.sydney.tutorialmod.block.Wood;
 import com.sydney.tutorialmod.block.custom.Cauliflower;
+import com.sydney.tutorialmod.block.custom.Pink_Garnet_Ore;
 import com.sydney.tutorialmod.block.custom.Tomato;
 import com.sydney.tutorialmod.item.ModItems;
 import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
@@ -35,6 +35,13 @@ public class ModLootTableProvider extends FabricBlockLootTableProvider {
         RegistryWrapper.Impl<Enchantment> impl = this.registries.getOrThrow(RegistryKeys.ENCHANTMENT);
 
 
+        addDrop(Pink_Garnet_Ore.PINK_GARNET_BLOCK);
+        addDrop(Pink_Garnet_Ore.RAW_PINK_GARNET_BLOCK);
+
+
+
+
+
         this.addDrop(ModBlocks.TOMATO,
                 block -> this.applyExplosionDecay(
                         block, LootTable.builder().pool(LootPool.builder().conditionally(
@@ -50,14 +57,8 @@ public class ModLootTableProvider extends FabricBlockLootTableProvider {
                                 .apply(ApplyBonusLootFunction.uniformBonusCount(impl.getOrThrow(Enchantments.FORTUNE))))));
 
 
-
-        addDrop(Wood.IRONWOOD_LOG);
-        addDrop(Wood.IRONWOOD_WOOD);
-        addDrop(Wood.STRIPPED_IRONWOOD_LOG);
-        addDrop(Wood.IRONWOOD_PLANKS);
-        addDrop(Wood.IRONWOOD_SAPLING);
-
-        addDrop(Wood.IRONWOOD_LEAVES, leavesDrops(Wood.IRONWOOD_LEAVES, Wood.IRONWOOD_SAPLING, 0.0625f));
+        addDrop(Pink_Garnet_Ore.PINK_GARNET_ORE, oreDrops(Pink_Garnet_Ore.PINK_GARNET_ORE, ModItems.RAW_PINK_GARNET));
+        addDrop(Pink_Garnet_Ore.PINK_GARNET_DEEPSLATE_ORE, multipleOreDrops(Pink_Garnet_Ore.PINK_GARNET_DEEPSLATE_ORE, ModItems.RAW_PINK_GARNET, 3, 7));
 
 
 

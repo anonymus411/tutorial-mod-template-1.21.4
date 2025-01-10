@@ -1,48 +1,36 @@
 package com.sydney.tutorialmod.world;
 
 import com.sydney.tutorialmod.TutorialMod;
-import com.sydney.tutorialmod.block.Wood;
+import com.sydney.tutorialmod.block.custom.Pink_Garnet_Ore;
 import net.minecraft.registry.Registerable;
 import net.minecraft.registry.RegistryKey;
 import net.minecraft.registry.RegistryKeys;
+import net.minecraft.registry.tag.BlockTags;
+import net.minecraft.structure.rule.RuleTest;
+import net.minecraft.structure.rule.TagMatchRuleTest;
 import net.minecraft.util.Identifier;
-import net.minecraft.util.math.intprovider.ConstantIntProvider;
-import net.minecraft.world.gen.feature.ConfiguredFeature;
-import net.minecraft.world.gen.feature.Feature;
-import net.minecraft.world.gen.feature.FeatureConfig;
-import net.minecraft.world.gen.feature.TreeFeatureConfig;
-import net.minecraft.world.gen.feature.size.TwoLayersFeatureSize;
-import net.minecraft.world.gen.foliage.BlobFoliagePlacer;
-import net.minecraft.world.gen.stateprovider.BlockStateProvider;
-import net.minecraft.world.gen.trunk.ForkingTrunkPlacer;
-import net.minecraft.world.gen.trunk.StraightTrunkPlacer;
+import net.minecraft.world.gen.feature.*;
+
+import java.util.List;
 
 public class ModConfiguredFeatures {
 
+    public static final RegistryKey<ConfiguredFeature<?, ?>> PINK_GARNET_ORE_KEY = registerKey("pink_garnet_ore");
 
-    public static final RegistryKey<ConfiguredFeature<?, ?>> IRONWOOD_KEY = registerKey("ironwood");
+
     public static void bootstrap(Registerable<ConfiguredFeature<?, ?>> context) {
+        RuleTest stoneReplaceables = new TagMatchRuleTest(BlockTags.STONE_ORE_REPLACEABLES);
+        RuleTest deepslateReplaceables = new TagMatchRuleTest(BlockTags.DEEPSLATE_ORE_REPLACEABLES);
 
 
-    register(context, IRONWOOD_KEY, Feature.TREE, new TreeFeatureConfig.Builder(
-            BlockStateProvider.of(Wood.IRONWOOD_LOG),
-                new ForkingTrunkPlacer(5, 6, 3),
-
-                BlockStateProvider.of(Wood.IRONWOOD_LEAVES),
-            new BlobFoliagePlacer(ConstantIntProvider.create(4), ConstantIntProvider.create(1), 3),
-
-            new TwoLayersFeatureSize(1, 0, 2)).build());
-}
+        List<OreFeatureConfig.Target> overworldPinkGarnetOres =
+                List.of(OreFeatureConfig.createTarget(stoneReplaceables, Pink_Garnet_Ore.PINK_GARNET_ORE.getDefaultState()),
+                        OreFeatureConfig.createTarget(deepslateReplaceables,Pink_Garnet_Ore.PINK_GARNET_DEEPSLATE_ORE.getDefaultState()));
 
 
+        register(context, PINK_GARNET_ORE_KEY, Feature.ORE, new OreFeatureConfig(overworldPinkGarnetOres, 12));
 
-
-
-
-
-
-
-
+    }
 
     public static RegistryKey<ConfiguredFeature<?, ?>> registerKey(String name) {
         return RegistryKey.of(RegistryKeys.CONFIGURED_FEATURE, Identifier.of(TutorialMod.MOD_ID, name));
@@ -52,10 +40,10 @@ public class ModConfiguredFeatures {
                                                                                    RegistryKey<ConfiguredFeature<?, ?>> key, F feature, FC configuration) {
         context.register(key, new ConfiguredFeature<>(feature, configuration));
     }
-
-    public void main() {
-    }
 }
+
+
+
 
 
 

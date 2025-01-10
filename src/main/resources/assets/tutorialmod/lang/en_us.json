@@ -1,5 +1,13 @@
 {
   "item.tutorialmod.pink_garnet": "Pink Garnet",
+  "item.tutorialmod.raw_pink_garnet": "Raw Pink Garnet",
+
+
+
+  "block.tutorialmod.pink_garnet_ore": "Pink Garnet Ore",
+  "block.tutorialmod.pink_garnet_deepslate_ore": "Pink Garnet Deepslate Ore",
+
+
   "item.tutorialmod.lilyfish": "Lilyfish",
   "item.tutorialmod.tomato": "Tomato",
   "item.tutorialmod.tomato_seeds": "Tomato Seeds",
@@ -14,7 +22,6 @@
   "item.tutorialmod.sweetberry_cupcake": "Sweetberry Cupcake",
 
 
-  "item.tutorialmod.green_glow_bottle": "Green Glow Bottle",
 
 
 
@@ -22,15 +29,17 @@
   "block.tutorialmod.oak_glass_trapdoor": "Oak Glass Trapdoor",
   "block.tutorialmod.cherry_glass_trapdoor": "Cherry Glass Trapdoor",
   "block.tutorialmod.cherry_barn_trapdoor": "Cherry Barn Trapdoor",
-  "block.tutorialmod.green_glow_bottle": "Green Glow Bottle",
 
-
-
-
+  "block.tutorialmod.silt": "silt",
   "block.tutorialmod.ironwood_log": "Ironwood  Log",
   "block.tutorialmod.ironwood_wood": "Ironwood  Wood",
-  "block.tutorialmod.stripped_ironwood_log": "Stripped Ironwood  Log",
+  "block.tutorialmod.stripped_ironwood_log": "Stripped Ironwood Log",
   "block.tutorialmod.ironwood_planks": "Ironwood  Planks",
   "block.tutorialmod.ironwood_leaves": "Ironwood  Leaves",
-  "block.tutorialmod.ironwood_sapling": "Ironwood Sapling"
+  "block.tutorialmod.ironwood_sapling": "Ironwood Sapling",
+
+
+
+  "itemgroup.tutorialmod.pink_garnet_items": "Pink Garnet Items",
+  "itemgroup.tutorialmod.pink_garnet_blocks": "Pink Garnet Blocks"
 }

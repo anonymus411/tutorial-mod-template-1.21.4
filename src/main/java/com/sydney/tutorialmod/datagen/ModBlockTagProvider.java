@@ -1,6 +1,7 @@
 package com.sydney.tutorialmod.datagen;
 
 import com.sydney.tutorialmod.block.ModBlocks;
+import com.sydney.tutorialmod.block.custom.Pink_Garnet_Ore;
 import com.sydney.tutorialmod.util.BlockTags;
 import com.sydney.tutorialmod.util.ModTags;
 import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
@@ -16,6 +17,11 @@ public class ModBlockTagProvider extends FabricTagProvider.BlockTagProvider {
 
     @Override
     protected void configure(RegistryWrapper.WrapperLookup wrapperLookup) {
+
+getOrCreateTagBuilder(net.minecraft.registry.tag.BlockTags.PICKAXE_MINEABLE)
+        .add(Pink_Garnet_Ore.PINK_GARNET_ORE)
+                .add(Pink_Garnet_Ore.PINK_GARNET_DEEPSLATE_ORE);
+
         getOrCreateTagBuilder(BlockTags.GLASS_TRAPDOORS)
                 .add(ModBlocks.CHERRY_GlASS_TRAPDOOR)
                 .add(ModBlocks.OAK_GlASS_TRAPDOOR);
@@ -24,6 +30,7 @@ public class ModBlockTagProvider extends FabricTagProvider.BlockTagProvider {
                 .add(ModBlocks.CHERRY_BARN_TRAPDOOR);
 
 
-        }
     }
+}
+
 

@@ -12,17 +12,21 @@ public class TutorialModDataGenerator implements DataGeneratorEntrypoint {
 	@Override
 	public void onInitializeDataGenerator(FabricDataGenerator fabricDataGenerator) {
 		FabricDataGenerator.Pack pack = fabricDataGenerator.createPack();
-		pack.addProvider(ModModelProvider::new);
-		pack.addProvider(ModItemTagProvider::new);
+
 		pack.addProvider(ModBlockTagProvider::new);
+		pack.addProvider(ModItemTagProvider::new);
 		pack.addProvider(ModLootTableProvider::new);
+		pack.addProvider(ModModelProvider::new);
 		pack.addProvider(ModRecipeProvider::new);
+		pack.addProvider(ModRegistryDataGenerator::new);
+
+
 	}
+
 	@Override
 	public void buildRegistry(RegistryBuilder registryBuilder) {
+
 		registryBuilder.addRegistry(RegistryKeys.CONFIGURED_FEATURE, ModConfiguredFeatures::bootstrap);
 		registryBuilder.addRegistry(RegistryKeys.PLACED_FEATURE, ModPlacedFeatures::bootstrap);
-
-
 	}
 }
