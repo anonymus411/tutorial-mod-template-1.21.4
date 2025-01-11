@@ -2,6 +2,7 @@ package com.sydney.tutorialmod.datagen;
 
 import com.sydney.tutorialmod.block.ModBlocks;
 import com.sydney.tutorialmod.block.custom.Pink_Garnet_Ore;
+import com.sydney.tutorialmod.block.custom.Silt;
 import com.sydney.tutorialmod.item.ModItems;
 import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
 import net.fabricmc.fabric.api.datagen.v1.provider.FabricRecipeProvider;
@@ -30,7 +31,6 @@ public class ModRecipeProvider extends FabricRecipeProvider {
     @Override
     protected RecipeGenerator getRecipeGenerator(RegistryWrapper.WrapperLookup wrapperLookup, RecipeExporter recipeExporter) {
         return new RecipeGenerator(wrapperLookup, recipeExporter) {
-
             @Override
             public void generate() {
 
@@ -41,7 +41,13 @@ public class ModRecipeProvider extends FabricRecipeProvider {
                         Pink_Garnet_Ore.PINK_GARNET_DEEPSLATE_ORE);
 
 
+                List<ItemConvertible> SILT_BALL_SMELTABLES = List.of(ModItems.SILT_BALL, ModItems.SILT_BRICK);
 
+
+
+
+
+                offerSmelting(SILT_BALL_SMELTABLES, RecipeCategory.MISC, ModItems.SILT_BALL, 0.3f, 200, "silt_ball");
 
                 offerReversibleCompactingRecipes(RecipeCategory.BUILDING_BLOCKS, ModItems.PINK_GARNET, RecipeCategory.DECORATIONS, Pink_Garnet_Ore.PINK_GARNET_BLOCK);
 

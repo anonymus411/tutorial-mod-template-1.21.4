@@ -8,10 +8,7 @@ import com.sydney.tutorialmod.block.custom.Tomato;
 import com.sydney.tutorialmod.item.ModItems;
 import net.fabricmc.fabric.api.client.datagen.v1.provider.FabricModelProvider;
 import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
-import net.minecraft.client.data.BlockStateModelGenerator;
-import net.minecraft.client.data.ItemModelGenerator;
-import net.minecraft.client.data.Models;
-import net.minecraft.client.data.TexturedModel;
+import net.minecraft.client.data.*;
 
 public class ModModelProvider extends FabricModelProvider {
     public ModModelProvider(FabricDataOutput output) {
@@ -47,6 +44,7 @@ blockStateModelGenerator.registerSimpleCubeAll(Pink_Garnet_Ore.RAW_PINK_GARNET_B
 
 
 
+
     }
 
     @Override
@@ -59,6 +57,7 @@ blockStateModelGenerator.registerSimpleCubeAll(Pink_Garnet_Ore.RAW_PINK_GARNET_B
     itemModelGenerator.register(ModItems.SWEETBERRY_JAM,Models.GENERATED);
     itemModelGenerator.register(ModItems.JAR,Models.GENERATED);
     itemModelGenerator.register(ModItems.RAW_PINK_GARNET,Models.GENERATED);
-
+itemModelGenerator.register(ModItems.SILT_BALL,Models.GENERATED);
+itemModelGenerator.register(ModItems.SILT_BRICK, Models.GENERATED);
     }
 }

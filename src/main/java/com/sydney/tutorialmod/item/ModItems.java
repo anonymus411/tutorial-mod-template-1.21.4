@@ -49,6 +49,13 @@ public class ModItems {
 
 
 
+    public static final Item SILT_BALL = registerItem("silt_ball", new Item(new Item.Settings()
+            .registryKey(RegistryKey.of(RegistryKeys.ITEM, Identifier.of(TutorialMod.MOD_ID, "silt_bal")))));
+
+    public static final Item SILT_BRICK = registerItem("silt_brick", new Item(new Item.Settings()
+            .registryKey(RegistryKey.of(RegistryKeys.ITEM, Identifier.of(TutorialMod.MOD_ID, "silt_brick")))));
+
+
     public static final Item LILYFISH = registerItem("lilyfish", new Item(new Item.Settings()
             .registryKey(RegistryKey.of(RegistryKeys.ITEM, Identifier.of(TutorialMod.MOD_ID, "lilyfish")))));
 

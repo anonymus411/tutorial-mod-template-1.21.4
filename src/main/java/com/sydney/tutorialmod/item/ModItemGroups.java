@@ -69,6 +69,8 @@ public class ModItemGroups {
                                             entries.add(Pink_Garnet_Ore.PINK_GARNET_BLOCK);
 
 entries.add(Silt.SILT);
+entries.add(ModItems.SILT_BALL);
+entries.add(ModItems.SILT_BRICK);
 
 
 

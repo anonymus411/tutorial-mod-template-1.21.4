@@ -2,6 +2,7 @@ package com.sydney.tutorialmod;
 
 import com.sydney.tutorialmod.block.ModBlocks;
 import com.sydney.tutorialmod.block.custom.Pink_Garnet_Ore;
+import com.sydney.tutorialmod.block.custom.Silt;
 import com.sydney.tutorialmod.item.ModItemGroups;
 import com.sydney.tutorialmod.item.ModItems;
 import com.sydney.tutorialmod.sound.ModSounds;
@@ -27,6 +28,7 @@ public class TutorialMod implements ModInitializer {
 		Pink_Garnet_Ore.registerModBlocks();
 		ModWorldGeneration.generateModWorldGen();
 		ModSounds.registerSounds();
+		Silt.registerModBlocks();
 
 
 

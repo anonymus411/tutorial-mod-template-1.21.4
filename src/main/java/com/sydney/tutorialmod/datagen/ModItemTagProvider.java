@@ -19,6 +19,7 @@ public class ModItemTagProvider extends FabricTagProvider.ItemTagProvider {
         getOrCreateTagBuilder(ModTags.Items.TRANSFORMABLE_ITEMS)
                 .add(ModItems.PINK_GARNET)
                 .add(ModItems.RAW_PINK_GARNET)
+                .add(ModItems.SILT_BALL)
                 .add(ModItems.LILYFISH)
                 .add(Items.COAL)
                 .add(Items.STICK)

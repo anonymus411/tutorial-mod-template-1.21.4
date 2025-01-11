@@ -3,6 +3,7 @@ package com.sydney.tutorialmod.datagen;
 import com.sydney.tutorialmod.block.ModBlocks;
 import com.sydney.tutorialmod.block.custom.Cauliflower;
 import com.sydney.tutorialmod.block.custom.Pink_Garnet_Ore;
+import com.sydney.tutorialmod.block.custom.Silt;
 import com.sydney.tutorialmod.block.custom.Tomato;
 import com.sydney.tutorialmod.item.ModItems;
 import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
@@ -60,7 +61,7 @@ public class ModLootTableProvider extends FabricBlockLootTableProvider {
         addDrop(Pink_Garnet_Ore.PINK_GARNET_ORE, oreDrops(Pink_Garnet_Ore.PINK_GARNET_ORE, ModItems.RAW_PINK_GARNET));
         addDrop(Pink_Garnet_Ore.PINK_GARNET_DEEPSLATE_ORE, multipleOreDrops(Pink_Garnet_Ore.PINK_GARNET_DEEPSLATE_ORE, ModItems.RAW_PINK_GARNET, 3, 7));
 
-
+        addDrop(Silt.SILT, oreDrops(Silt.SILT, ModItems.SILT_BALL));
 
 
 
