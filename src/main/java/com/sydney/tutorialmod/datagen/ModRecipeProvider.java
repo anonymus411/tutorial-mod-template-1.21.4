@@ -34,20 +34,17 @@ public class ModRecipeProvider extends FabricRecipeProvider {
             @Override
             public void generate() {
 
-            }
-
-            public void generate(RecipeExporter exporter) {
                 List<ItemConvertible> PINK_GARNET_SMELTABLES = List.of(ModItems.RAW_PINK_GARNET, Pink_Garnet_Ore.PINK_GARNET_ORE,
                         Pink_Garnet_Ore.PINK_GARNET_DEEPSLATE_ORE);
 
 
-                List<ItemConvertible> SILT_BALL_SMELTABLES = List.of(ModItems.SILT_BALL, ModItems.SILT_BRICK);
+                List<ItemConvertible> SILT_BALL_SMELTABLES = List.of(ModItems.SILT_BALL);
 
 
 
 
 
-                offerSmelting(SILT_BALL_SMELTABLES, RecipeCategory.MISC, ModItems.SILT_BALL, 0.3f, 200, "silt_ball");
+                offerSmelting(SILT_BALL_SMELTABLES, RecipeCategory.MISC, ModItems.SILT_BRICK, 0.3f, 200, "silt_brick");
 
                 offerReversibleCompactingRecipes(RecipeCategory.BUILDING_BLOCKS, ModItems.PINK_GARNET, RecipeCategory.DECORATIONS, Pink_Garnet_Ore.PINK_GARNET_BLOCK);
 

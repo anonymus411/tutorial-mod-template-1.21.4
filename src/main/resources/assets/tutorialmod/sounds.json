@@ -1,8 +1,51 @@
 {
-  "silt": {
-    "subtitle": "sounds.tutorialmod.silt",
+  "heavy1": {
+    "subtitle": "sounds.tutorialmod.heavy1",
     "sounds": [
-      "tutorialmod:silt"
+      "tutorialmod:heavy1"
+    ],
+
+  "heavy2": {
+    "subtitle": "sounds.tutorialmod.heavy2",
+    "sounds": [
+      "tutorialmod:heavy2"
     ]
-  }
-}
+  },
+    "heavy3": {
+      "subtitle": "sounds.tutorialmod.heavy3",
+      "sounds": [
+        "tutorialmod:heavy3"
+      ]
+    },
+      "heavy4": {
+        "subtitle": "sounds.tutorialmod.heavy4",
+        "sounds": [
+          "tutorialmod:heavy4"
+        ]
+      },
+        "light1": {
+          "subtitle": "sounds.tutorialmod.light1",
+          "sounds": [
+            "tutorialmod:light1"
+          ]
+        },
+          "light2": {
+            "subtitle": "sounds.tutorialmod.light2",
+            "sounds": [
+              "tutorialmod:light2"
+            ]
+          },
+            "light3": {
+              "subtitle": "sounds.tutorialmod.light3",
+              "sounds": [
+                "tutorialmod:light3"
+              ]
+            },
+              "light4": {
+                "subtitle": "sounds.tutorialmod.light4",
+                "sounds": [
+                  "tutorialmod:light4"
+                ]
+              }
+            }
+          }
