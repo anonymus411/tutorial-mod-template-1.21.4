@@ -10,6 +10,10 @@ import com.sydney.tutorialmod.world.gen.ModWorldGeneration;
 import net.fabricmc.api.ModInitializer;
 
 import net.fabricmc.fabric.api.registry.StrippableBlockRegistry;
+import net.minecraft.registry.Registries;
+import net.minecraft.registry.Registry;
+import net.minecraft.sound.SoundEvent;
+import net.minecraft.util.Identifier;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -29,6 +33,8 @@ public class TutorialMod implements ModInitializer {
 		ModWorldGeneration.generateModWorldGen();
 		ModSounds.registerSounds();
 		Silt.registerModBlocks();
+
+
 
 
 
