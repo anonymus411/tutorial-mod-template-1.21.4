@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "building",
+  "key": {
+    "A": "tutorialmod:rope",
+    "P": "minecraft:raw_gold_block"
+  },
+  "pattern": [
+    "PPP",
+    "PAP",
+    "PPP"
+  ],
+  "result": {
+    "count": 1,
+    "id": "tutorialmod:stacked_raw_gold_blocks"
+  }
+}

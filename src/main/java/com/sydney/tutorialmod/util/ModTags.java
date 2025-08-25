@@ -4,6 +4,7 @@ import com.sydney.tutorialmod.TutorialMod;
 import net.minecraft.block.Block;
 import net.minecraft.item.Item;
 import net.minecraft.registry.RegistryKeys;
+import net.minecraft.registry.tag.ItemTags;
 import net.minecraft.registry.tag.TagKey;
 import net.minecraft.util.Identifier;
 
@@ -25,8 +26,6 @@ public class ModTags {
     public static class Items {
         public static final TagKey<Item> TRANSFORMABLE_ITEMS = createTag("transformable_items");
         public static final TagKey<Item> PINK_GARNET_REPAIR = createTag("pink_garnet_repair");
-
-        public static final TagKey<Item> WOODEN_SLABS= createTag("wooden_slabs");
 
 
 

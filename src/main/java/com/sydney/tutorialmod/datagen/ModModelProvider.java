@@ -1,10 +1,7 @@
 package com.sydney.tutorialmod.datagen;
 
 import com.sydney.tutorialmod.block.ModBlocks;
-import com.sydney.tutorialmod.block.custom.Cauliflower;
-import com.sydney.tutorialmod.block.custom.Pink_Garnet_Ore;
-import com.sydney.tutorialmod.block.custom.Silt;
-import com.sydney.tutorialmod.block.custom.Tomato;
+import com.sydney.tutorialmod.block.custom.*;
 import com.sydney.tutorialmod.item.ModItems;
 import net.fabricmc.fabric.api.client.datagen.v1.provider.FabricModelProvider;
 import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
@@ -24,11 +21,16 @@ public class ModModelProvider extends FabricModelProvider {
         blockStateModelGenerator.registerTintableCrossBlockStateWithStages(ModBlocks.TOMATO, BlockStateModelGenerator.CrossType.NOT_TINTED,
                 Tomato.AGE, 0, 1, 2, 3);
 
+        blockStateModelGenerator.registerTintableCrossBlockStateWithStages(ModBlocks.STRAWBERRY, BlockStateModelGenerator.CrossType.NOT_TINTED,
+                Strawberry.AGE, 0, 1, 2, 3);
+
+blockStateModelGenerator.registerTintableCross(ModBlocks.DALIAH,BlockStateModelGenerator.CrossType.NOT_TINTED);
+
 
 blockStateModelGenerator.registerTrapdoor(ModBlocks.OAK_GlASS_TRAPDOOR);
 blockStateModelGenerator.registerTrapdoor(ModBlocks.CHERRY_GlASS_TRAPDOOR);
 blockStateModelGenerator.registerTrapdoor(ModBlocks.CHERRY_BARN_TRAPDOOR);
-
+blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.STACKED_RAW_GOLD_BLOCKS);
 
 //GARNET
 
@@ -41,7 +43,7 @@ blockStateModelGenerator.registerSimpleCubeAll(Pink_Garnet_Ore.RAW_PINK_GARNET_B
 //IRONWOOD
 
         blockStateModelGenerator.registerSimpleCubeAll(Silt.SILT);
-
+blockStateModelGenerator.registerSimpleCubeAll(Silt.SILT_BRICKS);
 
 
 
@@ -59,5 +61,7 @@ blockStateModelGenerator.registerSimpleCubeAll(Pink_Garnet_Ore.RAW_PINK_GARNET_B
     itemModelGenerator.register(ModItems.RAW_PINK_GARNET,Models.GENERATED);
 itemModelGenerator.register(ModItems.SILT_BALL,Models.GENERATED);
 itemModelGenerator.register(ModItems.SILT_BRICK, Models.GENERATED);
+itemModelGenerator.register(ModItems.STRAW,Models.GENERATED);
+        itemModelGenerator.register(ModItems.ROPE,Models.GENERATED);
     }
 }

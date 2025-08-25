@@ -30,7 +30,6 @@ public class Tomato extends SweetBerryBushBlock {
         final VoxelShape LARGE_SHAPE = Block.createCuboidShape(1.0, 0.0, 1.0, 15.0, 16.0, 15.0);
     }
 
-    @Override
     public void onEntityCollision(BlockState state, World world,BlockPos pos,Entity entity){}
     public ItemStack getPickStack(WorldView world, BlockPos pos, BlockState state) {
         return new ItemStack(ModItems.TOMATO);

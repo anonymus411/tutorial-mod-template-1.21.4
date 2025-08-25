@@ -28,8 +28,13 @@ public class ModItemGroups {
                         entries.add(ModItems.SWEETBERRY_JAM);
                         entries.add(ModItems.JAR);
                         entries.add(ModItems.RAW_PINK_GARNET);
-
-
+                        entries.add(ModItems.STRAW);
+                        entries.add(ModItems.ROPE);
+                        entries.add(ModItems.STRAWBERRY);
+                        entries.add(ModItems.STRAWBERRY_SEEDS);
+//silt
+entries.add(ModItems.SILT_BALL);
+entries.add(ModItems.SILT_BRICK);
 
                     }).build());
 
@@ -67,10 +72,12 @@ public class ModItemGroups {
                                             entries.add(Pink_Garnet_Ore.PINK_GARNET_ORE);
                                             entries.add(Pink_Garnet_Ore.RAW_PINK_GARNET_BLOCK);
                                             entries.add(Pink_Garnet_Ore.PINK_GARNET_BLOCK);
+                                            entries.add(ModBlocks.STACKED_RAW_GOLD_BLOCKS);
 
+//silt
 entries.add(Silt.SILT);
-entries.add(ModItems.SILT_BALL);
-entries.add(ModItems.SILT_BRICK);
+entries.add(Silt.SILT_BRICKS);
+
 
 
 

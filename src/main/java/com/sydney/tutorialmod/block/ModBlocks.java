@@ -2,11 +2,15 @@ package com.sydney.tutorialmod.block;
 
 import com.sydney.tutorialmod.TutorialMod;
 import com.sydney.tutorialmod.block.custom.Cauliflower;
+import com.sydney.tutorialmod.block.custom.Strawberry;
 import com.sydney.tutorialmod.block.custom.Tomato;
 
 import net.fabricmc.fabric.api.itemgroup.v1.ItemGroupEvents;
+
 import net.minecraft.block.*;
 import net.minecraft.block.piston.PistonBehavior;
+
+import net.minecraft.entity.effect.StatusEffects;
 import net.minecraft.item.BlockItem;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemGroups;
@@ -16,6 +20,8 @@ import net.minecraft.registry.RegistryKey;
 import net.minecraft.registry.RegistryKeys;
 import net.minecraft.sound.BlockSoundGroup;
 import net.minecraft.util.Identifier;
+
+import static net.minecraft.block.Blocks.createFlowerPotSettings;
 
 public class ModBlocks {
 
@@ -28,6 +34,26 @@ public class ModBlocks {
             new Cauliflower(AbstractBlock.Settings.create().registryKey(RegistryKey.of(RegistryKeys.BLOCK, Identifier.of(TutorialMod.MOD_ID, "cauliflower"))).noCollision()
                     .ticksRandomly().breakInstantly().sounds(BlockSoundGroup.CROP).pistonBehavior(PistonBehavior.DESTROY).mapColor(MapColor.DARK_GREEN)));
 
+    public static final Block STRAWBERRY = registerBlockWithoutBlockItem("strawberry",
+            new Strawberry(AbstractBlock.Settings.copy(Blocks.SWEET_BERRY_BUSH)
+                    .registryKey(RegistryKey.of(RegistryKeys.BLOCK, Identifier.of(TutorialMod.MOD_ID, "strawberry")))));
+
+
+    public static final Block DALIAH= registerBlockWithoutBlockItem(
+            "daliah",
+            settings -> new FlowerBlock(StatusEffects.SATURATION, 0.35F, settings),
+            AbstractBlock.Settings.create()
+                    .mapColor(MapColor.DARK_GREEN)
+                    .noCollision()
+                    .breakInstantly()
+                    .sounds(BlockSoundGroup.GRASS)
+                    .offset(AbstractBlock.OffsetType.XZ)
+                    .pistonBehavior(PistonBehavior.DESTROY));
+
+    public static final Block POTTED_DALIAH = registerBlockWithoutBlockItem(
+            "daliah,",
+
+            settings -> new FlowerPotBlock(DALIAH, settings), createFlowerPotSettings());
 
 
 
@@ -35,10 +61,9 @@ public class ModBlocks {
 
 
 
-
-
-
-
+    public static final Block STACKED_RAW_GOLD_BLOCKS = registerBlock("stacked_raw_gold_blocks",
+            new Block(AbstractBlock.Settings.create().registryKey(RegistryKey.of(RegistryKeys.BLOCK, Identifier.of(TutorialMod.MOD_ID, "raw_pink_garnet_block")))
+                    .strength(3f).requiresTool().sounds(BlockSoundGroup.AMETHYST_BLOCK)));
 
 
 

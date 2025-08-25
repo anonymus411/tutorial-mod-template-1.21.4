@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_cake_dough": {
+      "conditions": {
+        "items": [
+          {
+            "items": "tutorialmod:sweetberry_cupcake"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "tutorialmod:sweetberry_cupcake"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_cake_dough"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "tutorialmod:sweetberry_cupcake"
+    ]
+  }
+}

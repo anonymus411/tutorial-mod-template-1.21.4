@@ -21,8 +21,11 @@ public class ModSounds {
     public static final SoundEvent LIGHT3 = registerSoundEvent("light3");
     public static final SoundEvent LIGHT4 = registerSoundEvent("light4");
 
-    public static final BlockSoundGroup SILT_BLOCK_SOUNDS = new BlockSoundGroup(1f, 1f,
+    public static final BlockSoundGroup SILT= new BlockSoundGroup(6f, 8f,
            HEAVY1,HEAVY2,HEAVY3,HEAVY4,LIGHT1);
+
+    public static final BlockSoundGroup SILT_BLOCK_PLACE = new BlockSoundGroup(6f,8f,
+            LIGHT2,LIGHT3,LIGHT4,LIGHT1,HEAVY1);
 
 
 
