@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "A": "tutorialmod:cake_dough",
+    "B": "tutorialmod:sweetberry_jam"
+  },
+  "pattern": [
+    "AB",
+    "AB",
+    "  "
+  ],
+  "result": {
+    "count": 2,
+    "id": "tutorialmod:sweetberry_cupcake"
+  }
+}

@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "building",
+  "key": {
+    "R": "tutorialmod:silt_brick"
+  },
+  "pattern": [
+    "RR",
+    "RR",
+    "  "
+  ],
+  "result": {
+    "count": 1,
+    "id": "tutorialmod:silt_bricks"
+  }
+}

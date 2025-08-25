@@ -16,14 +16,18 @@
   "item.tutorialmod.cauliflower": "Cauliflower",
 
   "block.tutorialmod.cauliflower": "Cauliflower",
+  "item.tutorialmod.strawberry": "Strawberry",
+  "item.tutorialmod.strawberry_seeds": "Strawberry Seeds",
+  "block.tutorialmod.strawberry": "Strawberry",
 
   "item.tutorialmod.cake_dough": "Cake Dough",
   "item.tutorialmod.sweetberry_jam": "Sweetberry Jam",
   "item.tutorialmod.jar": "Jar",
   "item.tutorialmod.sweetberry_cupcake": "Sweetberry Cupcake",
 
-
-
+  "item.tutorialmod.straw": "Straw",
+  "item.tutorialmod.rope": "Rope",
+  "item.tutorialmod.stacked_raw_gold_blocks": "Stacked Raw Gold Blocks",
 
 
 
@@ -34,7 +38,7 @@
   "block.tutorialmod.silt": "silt",
   "item.tutorialmod.silt_ball": "Silt Ball",
   "item.tutorialmod.silt_brick": "Silt Brick",
-
+  "block.tutorialmod.silt_bricks": "Silt Bricks",
 
 
   "block.tutorialmod.ironwood_log": "Ironwood  Log",

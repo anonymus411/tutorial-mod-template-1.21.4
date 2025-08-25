@@ -1,5 +1,6 @@
 package com.sydney.tutorialmod.datagen;
 
+import com.sydney.tutorialmod.TutorialMod;
 import com.sydney.tutorialmod.block.ModBlocks;
 import com.sydney.tutorialmod.block.custom.Pink_Garnet_Ore;
 import com.sydney.tutorialmod.block.custom.Silt;
@@ -16,9 +17,11 @@ import net.minecraft.item.ItemStack;
 import net.minecraft.item.Items;
 import net.minecraft.recipe.book.RecipeCategory;
 import net.minecraft.registry.Registries;
+import net.minecraft.registry.RegistryKey;
 import net.minecraft.registry.RegistryKeys;
 import net.minecraft.registry.RegistryWrapper;
 import net.minecraft.registry.tag.ItemTags;
+import net.minecraft.util.Identifier;
 
 import java.util.List;
 import java.util.concurrent.CompletableFuture;
@@ -48,12 +51,22 @@ public class ModRecipeProvider extends FabricRecipeProvider {
 
                 offerReversibleCompactingRecipes(RecipeCategory.BUILDING_BLOCKS, ModItems.PINK_GARNET, RecipeCategory.DECORATIONS, Pink_Garnet_Ore.PINK_GARNET_BLOCK);
 
-                ShapedRecipeJsonBuilder.create(Registries.ITEM,RecipeCategory.BUILDING_BLOCKS,Pink_Garnet_Ore.RAW_PINK_GARNET_BLOCK,2)
+                ShapedRecipeJsonBuilder.create(Registries.ITEM,RecipeCategory.BUILDING_BLOCKS,Pink_Garnet_Ore.RAW_PINK_GARNET_BLOCK,1)
                         .pattern("RRR")
                         .pattern("RRR")
                         .pattern("RRR")
                         .input('R', ModItems.RAW_PINK_GARNET)
                         .criterion(hasItem(ModItems.RAW_PINK_GARNET), conditionsFromItem(ModItems.RAW_PINK_GARNET))
+                        .offerTo(exporter);
+
+
+
+                ShapedRecipeJsonBuilder.create(Registries.ITEM,RecipeCategory.BUILDING_BLOCKS,Silt.SILT_BRICKS,1)
+                        .pattern("RR")
+                        .pattern("RR")
+                        .pattern("  ")
+                        .input('R', ModItems.SILT_BRICK)
+                        .criterion(hasItem(ModItems.SILT_BRICK), conditionsFromItem(ModItems.SILT_BRICK))
                         .offerTo(exporter);
 
                 createShapeless(RecipeCategory.MISC, ModItems.RAW_PINK_GARNET, 9)
@@ -137,6 +150,26 @@ public class ModRecipeProvider extends FabricRecipeProvider {
                         .offerTo(exporter);
 
 
+
+
+                ShapedRecipeJsonBuilder.create(Registries.ITEM,RecipeCategory.MISC,ModItems.STRAW, 4)
+                        .pattern("AA ")
+                        .pattern("AA ")
+                        .pattern("   ")
+                        .input('A',ModItems.STRAW)
+                        .criterion(hasItem(ModItems.STRAW),conditionsFromItem(ModItems.ROPE))
+                        .offerTo(exporter);
+
+
+
+                ShapedRecipeJsonBuilder.create(Registries.ITEM,RecipeCategory.BUILDING_BLOCKS,ModBlocks.STACKED_RAW_GOLD_BLOCKS, 1)
+                        .pattern("PPP")
+                        .pattern("PAP")
+                        .pattern("PPP")
+                        .input('A',ModItems.ROPE)
+                        .input('P',Items.RAW_GOLD_BLOCK)
+                        .criterion(hasItem(Items.RAW_GOLD_BLOCK),conditionsFromItem(ModItems.ROPE))
+                        .offerTo(exporter);
 
             }
 

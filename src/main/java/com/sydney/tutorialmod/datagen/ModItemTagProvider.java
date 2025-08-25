@@ -16,17 +16,16 @@ public class ModItemTagProvider extends FabricTagProvider.ItemTagProvider {
 
     @Override
     protected void configure(RegistryWrapper.WrapperLookup wrapperLookup) {
-        getOrCreateTagBuilder(ModTags.Items.TRANSFORMABLE_ITEMS)
+        valueLookupBuilder(ModTags.Items.TRANSFORMABLE_ITEMS)
                 .add(ModItems.PINK_GARNET)
                 .add(ModItems.RAW_PINK_GARNET)
                 .add(ModItems.SILT_BALL)
                 .add(ModItems.LILYFISH)
                 .add(Items.COAL)
                 .add(Items.STICK)
-                .add(Items.APPLE);
+                .add(Items.APPLE)
+                        .add(ModItems.STRAW);
 
 
-        getOrCreateTagBuilder(ModTags.Items.WOODEN_SLABS)
-                .add(ModItems.JAR);
     }
 }

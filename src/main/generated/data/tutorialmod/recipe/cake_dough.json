@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "A": "minecraft:egg",
+    "B": "minecraft:wheat",
+    "K": "minecraft:milk_bucket",
+    "S": "minecraft:sugar"
+  },
+  "pattern": [
+    "AB",
+    "KS",
+    "  "
+  ],
+  "result": {
+    "count": 2,
+    "id": "tutorialmod:cake_dough"
+  }
+}

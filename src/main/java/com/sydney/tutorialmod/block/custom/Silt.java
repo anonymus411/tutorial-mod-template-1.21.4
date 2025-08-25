@@ -15,15 +15,23 @@ import net.minecraft.registry.RegistryKeys;
 import net.minecraft.sound.BlockSoundGroup;
 import net.minecraft.util.Identifier;
 
+import static com.sydney.tutorialmod.sound.ModSounds.SILT_BLOCK_PLACE;
+
 public class Silt {
+
+
+
 
     public static final Block SILT = registerBlock("silt",
             new Block(AbstractBlock.Settings.create().registryKey(RegistryKey.of(RegistryKeys.BLOCK, Identifier.of(TutorialMod.MOD_ID, "silt")))
                     .strength(1f)
-                    .requiresTool()));
+                    .requiresTool().sounds(ModSounds.SILT)));
 
 
-
+    public static final Block SILT_BRICKS = registerBlock("silt_bricks",
+            new Block(AbstractBlock.Settings.create().registryKey(RegistryKey.of(RegistryKeys.BLOCK, Identifier.of(TutorialMod.MOD_ID, "silt")))
+                    .strength(3f)
+                    .requiresTool().sounds(SILT_BLOCK_PLACE)));
 
 
     private static Block registerBlock(String name, Block block) {

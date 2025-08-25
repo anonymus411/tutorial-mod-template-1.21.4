@@ -25,9 +25,13 @@ public class ModItems {
             .food(ModFoodComponents.SWEETBERRY_CUPCAKE)));
 
 
+    public static final Item STRAWBERRY = registerItem("strawberry", new Item(new Item.Settings()
+            .registryKey(RegistryKey.of(RegistryKeys.ITEM, Identifier.of(TutorialMod.MOD_ID, "strawberry")))
+            .food(ModFoodComponents.STRAWBERRY)));
 
-
-
+    public static final Item STRAWBERRY_SEEDS = registerItem("strawberry_seeds",
+            new BlockItem(ModBlocks.STRAWBERRY, new Item.Settings()
+                    .registryKey(RegistryKey.of(RegistryKeys.ITEM, Identifier.of(TutorialMod.MOD_ID, "strawberry_seeds")))));
 
 
 
@@ -46,6 +50,14 @@ public class ModItems {
 
     public static final Item PINK_GARNET = registerItem("pink_garnet", new Item(new Item.Settings()
             .registryKey(RegistryKey.of(RegistryKeys.ITEM, Identifier.of(TutorialMod.MOD_ID, "pink_garnet")))));
+
+    public static final Item STRAW = registerItem("straw", new Item(new Item.Settings()
+            .registryKey(RegistryKey.of(RegistryKeys.ITEM, Identifier.of(TutorialMod.MOD_ID, "straw")))));
+
+    public static final Item ROPE = registerItem("rope", new Item(new Item.Settings()
+            .registryKey(RegistryKey.of(RegistryKeys.ITEM, Identifier.of(TutorialMod.MOD_ID, "rope")))));
+
+
 
 
 

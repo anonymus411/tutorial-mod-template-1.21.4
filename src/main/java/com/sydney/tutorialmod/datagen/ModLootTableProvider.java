@@ -1,10 +1,7 @@
 package com.sydney.tutorialmod.datagen;
 
 import com.sydney.tutorialmod.block.ModBlocks;
-import com.sydney.tutorialmod.block.custom.Cauliflower;
-import com.sydney.tutorialmod.block.custom.Pink_Garnet_Ore;
-import com.sydney.tutorialmod.block.custom.Silt;
-import com.sydney.tutorialmod.block.custom.Tomato;
+import com.sydney.tutorialmod.block.custom.*;
 import com.sydney.tutorialmod.item.ModItems;
 import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
 import net.fabricmc.fabric.api.datagen.v1.provider.FabricBlockLootTableProvider;
@@ -38,6 +35,24 @@ public class ModLootTableProvider extends FabricBlockLootTableProvider {
 
         addDrop(Pink_Garnet_Ore.PINK_GARNET_BLOCK);
         addDrop(Pink_Garnet_Ore.RAW_PINK_GARNET_BLOCK);
+addDrop(ModBlocks.STACKED_RAW_GOLD_BLOCKS);
+
+
+
+        this.addDrop(ModBlocks.STRAWBERRY,
+                block -> this.applyExplosionDecay(
+                        block, LootTable.builder().pool(LootPool.builder().conditionally(
+                                                BlockStatePropertyLootCondition.builder(ModBlocks.STRAWBERRY).properties(StatePredicate.Builder.create().exactMatch(Tomato.AGE, 3))
+                                        )
+                                        .with(ItemEntry.builder(ModItems.STRAWBERRY_SEEDS))
+                                        .apply(SetCountLootFunction.builder(UniformLootNumberProvider.create(2.0F, 3.0F)))
+                                        .apply(ApplyBonusLootFunction.uniformBonusCount(impl.getOrThrow(Enchantments.FORTUNE)))
+                        ).pool(LootPool.builder().conditionally(
+                                        BlockStatePropertyLootCondition.builder(ModBlocks.STRAWBERRY).properties(StatePredicate.Builder.create().exactMatch(Strawberry.AGE, 2))
+                                ).with(ItemEntry.builder(ModItems.STRAWBERRY))
+                                .apply(SetCountLootFunction.builder(UniformLootNumberProvider.create(1.0F, 2.0F)))
+                                .apply(ApplyBonusLootFunction.uniformBonusCount(impl.getOrThrow(Enchantments.FORTUNE))))));
+
 
 
 
@@ -60,8 +75,9 @@ public class ModLootTableProvider extends FabricBlockLootTableProvider {
 
         addDrop(Pink_Garnet_Ore.PINK_GARNET_ORE, oreDrops(Pink_Garnet_Ore.PINK_GARNET_ORE, ModItems.RAW_PINK_GARNET));
         addDrop(Pink_Garnet_Ore.PINK_GARNET_DEEPSLATE_ORE, multipleOreDrops(Pink_Garnet_Ore.PINK_GARNET_DEEPSLATE_ORE, ModItems.RAW_PINK_GARNET, 3, 7));
-
+//silt
         addDrop(Silt.SILT, oreDrops(Silt.SILT, ModItems.SILT_BALL));
+        addDrop(Silt.SILT_BRICKS);
 
 
 

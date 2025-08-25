@@ -1,48 +1,48 @@
 {
   "heavy1": {
-    "subtitle": "sounds.tutorialmod.heavy1",
+    "subtitle": "subtitles.block.generic.break",
     "sounds": [
       "tutorialmod:heavy1"
     ],
 
   "heavy2": {
-    "subtitle": "sounds.tutorialmod.heavy2",
+    "subtitle": "subtitles.block.generic.break",
     "sounds": [
       "tutorialmod:heavy2"
     ]
   },
     "heavy3": {
-      "subtitle": "sounds.tutorialmod.heavy3",
+      "subtitle": "subtitles.block.generic.break",
       "sounds": [
         "tutorialmod:heavy3"
       ]
     },
       "heavy4": {
-        "subtitle": "sounds.tutorialmod.heavy4",
+        "subtitle": "subtitles.block.generic.break",
         "sounds": [
           "tutorialmod:heavy4"
         ]
       },
         "light1": {
-          "subtitle": "sounds.tutorialmod.light1",
+          "subtitle": "subtitles.block.generic.break",
           "sounds": [
             "tutorialmod:light1"
           ]
         },
           "light2": {
-            "subtitle": "sounds.tutorialmod.light2",
+            "subtitle": "subtitles.block.generic.break",
             "sounds": [
               "tutorialmod:light2"
             ]
           },
             "light3": {
-              "subtitle": "sounds.tutorialmod.light3",
+              "subtitle": "subtitles.block.generic.break",
               "sounds": [
                 "tutorialmod:light3"
               ]
             },
               "light4": {
-                "subtitle": "sounds.tutorialmod.light4",
+                "subtitle": "subtitles.block.generic.break",
                 "sounds": [
                   "tutorialmod:light4"
                 ]
