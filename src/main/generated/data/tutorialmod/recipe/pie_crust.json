@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "A": "minecraft:milk_bucket",
+    "R": "tutorialmod:flour"
+  },
+  "pattern": [
+    "RAR",
+    "   ",
+    "   "
+  ],
+  "result": {
+    "count": 1,
+    "id": "tutorialmod:pie_crust"
+  }
+}
