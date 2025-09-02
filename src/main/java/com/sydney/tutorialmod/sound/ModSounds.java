@@ -9,6 +9,7 @@ import net.minecraft.util.Identifier;
 
 public class ModSounds {
 
+    public static final BlockSoundGroup SAKURA_WOOD = BlockSoundGroup.CHERRY_WOOD;
 
     public static final SoundEvent HEAVY1 = registerSoundEvent("heavy1");
     public static final SoundEvent HEAVY2 = registerSoundEvent("heavy2");

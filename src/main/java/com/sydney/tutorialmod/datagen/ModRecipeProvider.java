@@ -4,7 +4,9 @@ import com.sydney.tutorialmod.TutorialMod;
 import com.sydney.tutorialmod.block.ModBlocks;
 import com.sydney.tutorialmod.block.custom.Pink_Garnet_Ore;
 import com.sydney.tutorialmod.block.custom.Silt;
+import com.sydney.tutorialmod.item.CookieCutter;
 import com.sydney.tutorialmod.item.ModItems;
+import com.sydney.tutorialmod.item.Popsicle;
 import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
 import net.fabricmc.fabric.api.datagen.v1.provider.FabricRecipeProvider;
 import net.minecraft.data.recipe.RecipeExporter;
@@ -43,13 +45,13 @@ public class ModRecipeProvider extends FabricRecipeProvider {
 
                 List<ItemConvertible> SILT_BALL_SMELTABLES = List.of(ModItems.SILT_BALL);
 
-
-
-
-
                 offerSmelting(SILT_BALL_SMELTABLES, RecipeCategory.MISC, ModItems.SILT_BRICK, 0.3f, 200, "silt_brick");
 
+
                 offerReversibleCompactingRecipes(RecipeCategory.BUILDING_BLOCKS, ModItems.PINK_GARNET, RecipeCategory.DECORATIONS, Pink_Garnet_Ore.PINK_GARNET_BLOCK);
+
+
+
 
                 ShapedRecipeJsonBuilder.create(Registries.ITEM,RecipeCategory.BUILDING_BLOCKS,Pink_Garnet_Ore.RAW_PINK_GARNET_BLOCK,1)
                         .pattern("RRR")
@@ -59,7 +61,14 @@ public class ModRecipeProvider extends FabricRecipeProvider {
                         .criterion(hasItem(ModItems.RAW_PINK_GARNET), conditionsFromItem(ModItems.RAW_PINK_GARNET))
                         .offerTo(exporter);
 
-
+                ShapedRecipeJsonBuilder.create(Registries.ITEM,RecipeCategory.MISC,ModItems.PIE_CRUST,1)
+                        .pattern("RAR")
+                        .pattern("   ")
+                        .pattern("   ")
+                        .input('R', ModItems.FLOUR)
+                        .input('A',Items.MILK_BUCKET)
+                        .criterion(hasItem(ModItems.FLOUR), conditionsFromItem(ModItems.PIE_CRUST))
+                        .offerTo(exporter);
 
                 ShapedRecipeJsonBuilder.create(Registries.ITEM,RecipeCategory.BUILDING_BLOCKS,Silt.SILT_BRICKS,1)
                         .pattern("RR")
@@ -160,6 +169,26 @@ public class ModRecipeProvider extends FabricRecipeProvider {
                         .criterion(hasItem(ModItems.STRAW),conditionsFromItem(ModItems.ROPE))
                         .offerTo(exporter);
 
+                ShapedRecipeJsonBuilder.create(Registries.ITEM,RecipeCategory.MISC,ModItems.CIRCLE_COOKIE_CUTTER, 1)
+                        .pattern("AAA")
+                        .pattern("A A")
+                        .pattern("AAA")
+                        .input('A',Items.IRON_NUGGET)
+                        .criterion(hasItem(Items.IRON_NUGGET),conditionsFromItem(ModItems.CIRCLE_COOKIE_CUTTER))
+                        .offerTo(exporter);
+
+
+
+                ShapedRecipeJsonBuilder.create(Registries.ITEM,RecipeCategory.MISC, CookieCutter.STAR_COOKIE_CUTTER, 1)
+                        .pattern(  " a ")
+                        .pattern(  "a a")
+                        .pattern(  " a ")
+                        .input('a',Items.IRON_NUGGET)
+                        .criterion(hasItem(Items.IRON_NUGGET),conditionsFromItem(CookieCutter.STAR_COOKIE_CUTTER))
+                        .offerTo(exporter);
+
+
+
 
 
                 ShapedRecipeJsonBuilder.create(Registries.ITEM,RecipeCategory.BUILDING_BLOCKS,ModBlocks.STACKED_RAW_GOLD_BLOCKS, 1)
@@ -170,6 +199,53 @@ public class ModRecipeProvider extends FabricRecipeProvider {
                         .input('P',Items.RAW_GOLD_BLOCK)
                         .criterion(hasItem(Items.RAW_GOLD_BLOCK),conditionsFromItem(ModItems.ROPE))
                         .offerTo(exporter);
+
+
+                ShapedRecipeJsonBuilder.create(Registries.ITEM,RecipeCategory.FOOD,ModItems.SUGAR_COOKIE, 8)
+                        .pattern("ADD")
+                        .pattern("   ")
+                        .pattern("   ")
+                        .input('A',Items.SUGAR)
+                        .input('D',Items.WHEAT)
+                        .criterion(hasItem(Items.WHEAT),conditionsFromItem(ModItems.SUGAR_COOKIE))
+                        .offerTo(exporter);
+
+
+                ShapedRecipeJsonBuilder.create(Registries.ITEM,RecipeCategory.FOOD,ModItems.BLUE_ROYAL_FROSTING, 1)
+                        .pattern("ADE")
+                        .pattern("   ")
+                        .pattern("   ")
+                        .input('A',Items.SUGAR)
+                        .input('D',Items.BLUE_DYE)
+                        .input('E',Items.EGG)
+                        .criterion(hasItem(Items.EGG),conditionsFromItem(ModItems.BLUE_ROYAL_FROSTING))
+                        .offerTo(exporter);
+
+                createShapeless(RecipeCategory.FOOD, ModItems.BLUE_SUGAR_COOKIE, 1)
+                        .input(ModItems.SUGAR_COOKIE)
+                        .input(ModItems.BLUE_ROYAL_FROSTING)
+                        .criterion(hasItem(ModItems.SUGAR_COOKIE), conditionsFromItem(ModItems.BLUE_SUGAR_COOKIE))
+                        .offerTo(exporter);
+
+
+
+
+
+                ShapedRecipeJsonBuilder.create(Registries.ITEM,RecipeCategory.FOOD, Popsicle.MELON_POPSICLE, 1)
+                        .pattern(" mm")
+                        .pattern("imm")
+                        .pattern("-i ")
+                        .input('m',Items.MELON_SLICE)
+                        .input('i',Items.ICE)
+                        .input('-',Items.STICK)
+                        .criterion(hasItem(Items.MELON_SLICE),conditionsFromItem(Popsicle.MELON_POPSICLE))
+                        .offerTo(exporter);
+
+
+
+
+
+
 
             }
 

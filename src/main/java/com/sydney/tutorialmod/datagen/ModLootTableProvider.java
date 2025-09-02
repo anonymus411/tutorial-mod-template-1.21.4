@@ -39,6 +39,7 @@ addDrop(ModBlocks.STACKED_RAW_GOLD_BLOCKS);
 
 
 
+
         this.addDrop(ModBlocks.STRAWBERRY,
                 block -> this.applyExplosionDecay(
                         block, LootTable.builder().pool(LootPool.builder().conditionally(
@@ -71,6 +72,27 @@ addDrop(ModBlocks.STACKED_RAW_GOLD_BLOCKS);
                                 ).with(ItemEntry.builder(ModItems.TOMATO))
                                 .apply(SetCountLootFunction.builder(UniformLootNumberProvider.create(1.0F, 2.0F)))
                                 .apply(ApplyBonusLootFunction.uniformBonusCount(impl.getOrThrow(Enchantments.FORTUNE))))));
+
+
+        this.addDrop(ModBlocks.CRANBERRY_BUSH,
+                block -> this.applyExplosionDecay(
+                        block, LootTable.builder().pool(LootPool.builder().conditionally(
+                                                BlockStatePropertyLootCondition.builder(ModBlocks.CRANBERRY_BUSH).properties(StatePredicate.Builder.create().exactMatch(CranberryPlant.AGE, 3))
+                                        )
+                                        .with(ItemEntry.builder(ModItems.CRANBERRY))
+                                        .apply(SetCountLootFunction.builder(UniformLootNumberProvider.create(2.0F, 3.0F)))
+                                        .apply(ApplyBonusLootFunction.uniformBonusCount(impl.getOrThrow(Enchantments.FORTUNE)))
+                        ).pool(LootPool.builder().conditionally(
+                                        BlockStatePropertyLootCondition.builder(ModBlocks.CRANBERRY_BUSH).properties(StatePredicate.Builder.create().exactMatch(CranberryPlant.AGE, 2))
+                                ).with(ItemEntry.builder(ModItems.CRANBERRY))
+                                .apply(SetCountLootFunction.builder(UniformLootNumberProvider.create(1.0F, 2.0F)))
+                                .apply(ApplyBonusLootFunction.uniformBonusCount(impl.getOrThrow(Enchantments.FORTUNE))))));
+
+
+
+
+
+
 
 
         addDrop(Pink_Garnet_Ore.PINK_GARNET_ORE, oreDrops(Pink_Garnet_Ore.PINK_GARNET_ORE, ModItems.RAW_PINK_GARNET));

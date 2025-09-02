@@ -2,6 +2,7 @@ package com.sydney.tutorialmod.util;
 
 import com.sydney.tutorialmod.TutorialMod;
 import net.minecraft.block.Block;
+import net.minecraft.block.FlowerPotBlock;
 import net.minecraft.registry.Registries;
 import net.minecraft.registry.RegistryKeys;
 import net.minecraft.registry.tag.TagKey;
@@ -16,7 +17,11 @@ public class BlockTags {
 
     public static final TagKey<Block> CHERRY_BARN_TRAPDOOR = createTag("cherry_barn_trapdoor");
     public static final TagKey<Block> CHERRY_GLASS_TRAPDOOR = createTag("cherry_glass_trapdoor");
-;
+public static final TagKey<Block> DAHLIA = createTag("potted_dahlia")
+
+    ;
+
+
 
 
 

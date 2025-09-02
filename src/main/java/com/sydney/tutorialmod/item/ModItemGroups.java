@@ -1,7 +1,9 @@
 package com.sydney.tutorialmod.item;
 
 import com.sydney.tutorialmod.TutorialMod;
+import com.sydney.tutorialmod.block.Flowers;
 import com.sydney.tutorialmod.block.ModBlocks;
+import com.sydney.tutorialmod.block.TutorialModBlocks;
 import com.sydney.tutorialmod.block.custom.Pink_Garnet_Ore;
 import com.sydney.tutorialmod.block.custom.Silt;
 import net.fabricmc.fabric.api.itemgroup.v1.FabricItemGroup;
@@ -32,9 +34,21 @@ public class ModItemGroups {
                         entries.add(ModItems.ROPE);
                         entries.add(ModItems.STRAWBERRY);
                         entries.add(ModItems.STRAWBERRY_SEEDS);
+                        entries.add(ModItems.CIRCLE_COOKIE_CUTTER);
+                        entries.add(ModItems.BLUE_ROYAL_FROSTING);
+                        entries.add(ModItems.SUGAR_COOKIE);
+                        entries.add(ModItems.BLUE_SUGAR_COOKIE);
+                        entries.add(CookieCutter.STAR_COOKIE_CUTTER);
+
+                        entries.add(Popsicle.MELON_POPSICLE);
+
 //silt
 entries.add(ModItems.SILT_BALL);
 entries.add(ModItems.SILT_BRICK);
+                        entries.add(Cookies.LIGHT_BLUE_SUGAR_COOKIE);
+                        entries.add(Cookies.LIME_SUGAR_COOKIE);
+                        entries.add(Frosting.LIGHT_BLUE_ROYAL_FROSTING);
+                        entries.add(Frosting.LIME_ROYAL_FROSTING);
 
                     }).build());
 
@@ -66,6 +80,9 @@ entries.add(ModItems.SILT_BRICK);
                                         .entries((displayContext, entries) -> {
                                             entries.add(ModBlocks.OAK_GlASS_TRAPDOOR);
                                             entries.add(ModBlocks.CHERRY_GlASS_TRAPDOOR);
+entries.add(ModBlocks.SPRUCE_CHAIR);
+entries.add(TutorialModBlocks.SAKURA_PLANKS);
+entries.add(TutorialModBlocks.SAKURA_SLAB);
 
                                             //GARNET
                                             entries.add(Pink_Garnet_Ore.PINK_GARNET_DEEPSLATE_ORE);
@@ -73,10 +90,20 @@ entries.add(ModItems.SILT_BRICK);
                                             entries.add(Pink_Garnet_Ore.RAW_PINK_GARNET_BLOCK);
                                             entries.add(Pink_Garnet_Ore.PINK_GARNET_BLOCK);
                                             entries.add(ModBlocks.STACKED_RAW_GOLD_BLOCKS);
-
+                                            entries.add(ModBlocks.DAHLIA);
+                                            entries.add(Flowers.FORGET_ME_NOT);
+                                            entries.add(ModItems.FLOUR);
+                                            entries.add(ModItems.PIE_CRUST);
+                                            entries.add(ModItems.CRANBERRY);
+entries.add(ModBlocks.CHERRY_BARREL);
+entries.add(ModBlocks.MANGROVE_BARREL);
+entries.add(ModBlocks.SAKURA_WALL_SIGN);
+entries.add(ModBlocks.SAKURA_PLANKS);
+entries.add(ModBlocks.SAKURA_HANGING_SIGN);
 //silt
 entries.add(Silt.SILT);
 entries.add(Silt.SILT_BRICKS);
+
 
 
 

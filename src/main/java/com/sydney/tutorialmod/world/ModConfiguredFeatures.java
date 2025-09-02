@@ -17,6 +17,7 @@ public class ModConfiguredFeatures {
 
     public static final RegistryKey<ConfiguredFeature<?, ?>> PINK_GARNET_ORE_KEY = registerKey("pink_garnet_ore");
 
+    public static final RegistryKey<ConfiguredFeature<?, ?>> SAKURA_KEY = registerKey("sakura");
 
     public static void bootstrap(Registerable<ConfiguredFeature<?, ?>> context) {
         RuleTest stoneReplaceables = new TagMatchRuleTest(BlockTags.STONE_ORE_REPLACEABLES);
@@ -29,6 +30,22 @@ public class ModConfiguredFeatures {
 
 
         register(context, PINK_GARNET_ORE_KEY, Feature.ORE, new OreFeatureConfig(overworldPinkGarnetOres, 12));
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
     }
 

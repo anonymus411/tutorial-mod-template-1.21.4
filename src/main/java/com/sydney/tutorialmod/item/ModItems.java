@@ -20,6 +20,11 @@ public class ModItems {
             .food(ModFoodComponents.CAULIFLOWER)));
 
 
+
+
+
+
+
     public static final Item SWEETBERRY_CUPCAKE = registerItem("sweetberry_cupcake", new Item(new Item.Settings()
             .registryKey(RegistryKey.of(RegistryKeys.ITEM, Identifier.of(TutorialMod.MOD_ID, "sweetberry_cupcake")))
             .food(ModFoodComponents.SWEETBERRY_CUPCAKE)));
@@ -58,7 +63,9 @@ public class ModItems {
             .registryKey(RegistryKey.of(RegistryKeys.ITEM, Identifier.of(TutorialMod.MOD_ID, "rope")))));
 
 
-
+    public static final Item CRANBERRY = registerItem("cranberry",
+            new  BlockItem(ModBlocks.CRANBERRY_BUSH, new Item.Settings().food(ModFoodComponents.CRANBERRY)
+                    .registryKey(RegistryKey.of(RegistryKeys.ITEM, Identifier.of(TutorialMod.MOD_ID, "cranberry")))));
 
 
     public static final Item SILT_BALL = registerItem("silt_ball", new Item(new Item.Settings()
@@ -70,6 +77,9 @@ public class ModItems {
 
     public static final Item LILYFISH = registerItem("lilyfish", new Item(new Item.Settings()
             .registryKey(RegistryKey.of(RegistryKeys.ITEM, Identifier.of(TutorialMod.MOD_ID, "lilyfish")))));
+
+    public static final Item PIE_CRUST = registerItem("pie_crust", new Item(new Item.Settings()
+            .registryKey(RegistryKey.of(RegistryKeys.ITEM, Identifier.of(TutorialMod.MOD_ID, "pie_crust")))));
 
 
     public static final Item TOMATO_SEEDS = registerItem("tomato_seeds",
@@ -86,6 +96,28 @@ public class ModItems {
 
 
 
+
+/////cookie cutters
+public static final Item CIRCLE_COOKIE_CUTTER = registerItem("circle_cookie_cutter", new Item(new Item.Settings()
+        .registryKey(RegistryKey.of(RegistryKeys.ITEM, Identifier.of(TutorialMod.MOD_ID, "circle_cookie_cutter")))));
+
+    public static final Item FLOUR = registerItem("flour", new Item(new Item.Settings()
+            .registryKey(RegistryKey.of(RegistryKeys.ITEM, Identifier.of(TutorialMod.MOD_ID, "flour")))));
+
+
+
+
+    public static final Item BLUE_ROYAL_FROSTING = registerItem("blue_royal_frosting", new TubeItem(new Item.Settings() .registryKey(RegistryKey.of(RegistryKeys.ITEM,Identifier.of(TutorialMod.MOD_ID,"blue_royal_frosting")))
+            .maxDamage(8).maxCount(1)));
+
+
+    public static final Item SUGAR_COOKIE = registerItem("sugar_cookie", new Item(new Item.Settings()
+            .registryKey(RegistryKey.of(RegistryKeys.ITEM, Identifier.of(TutorialMod.MOD_ID, "sugar_cookie")))
+            .food(ModFoodComponents.SUGAR_COOKIE)));
+
+    public static final Item BLUE_SUGAR_COOKIE = registerItem("blue_sugar_cookie", new Item(new Item.Settings()
+            .registryKey(RegistryKey.of(RegistryKeys.ITEM, Identifier.of(TutorialMod.MOD_ID, "blue_sugar_cookie")))
+            .food(ModFoodComponents.SUGAR_COOKIE)));
 
 
     private static Item registerItem(String name, Item item) {

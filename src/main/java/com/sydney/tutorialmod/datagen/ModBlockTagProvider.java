@@ -7,6 +7,8 @@ import com.sydney.tutorialmod.util.BlockTags;
 import com.sydney.tutorialmod.util.ModTags;
 import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
 import net.fabricmc.fabric.api.datagen.v1.provider.FabricTagProvider;
+import net.minecraft.block.AbstractBlock;
+import net.minecraft.block.FlowerBlock;
 import net.minecraft.registry.RegistryWrapper;
 
 import java.util.concurrent.CompletableFuture;
@@ -26,10 +28,11 @@ public class ModBlockTagProvider extends FabricTagProvider.BlockTagProvider {
         .add(Silt.SILT_BRICKS);
         valueLookupBuilder(BlockTags.GLASS_TRAPDOORS)
                 .add(ModBlocks.CHERRY_GlASS_TRAPDOOR)
-                .add(ModBlocks.OAK_GlASS_TRAPDOOR)
-                        .add(ModBlocks.DALIAH);
+                .add(ModBlocks.OAK_GlASS_TRAPDOOR);
         valueLookupBuilder(BlockTags.BARN_TRAPDOORS)
                 .add(ModBlocks.CHERRY_BARN_TRAPDOOR);
+
+
 
 
     }

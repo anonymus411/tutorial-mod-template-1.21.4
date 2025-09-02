@@ -1,13 +1,45 @@
 {
   "item.tutorialmod.pink_garnet": "Pink Garnet",
   "item.tutorialmod.raw_pink_garnet": "Raw Pink Garnet",
+  "item.tutorialmod.flour": "Flour",
+  "item.tutorialmod.pie_crust": "Pie Crust",
 
   "block.tutorialmod.pink_garnet_block": "Block Of Pink Garnet",
   "block.tutorialmod.raw_pink_garnet_block": "Block Of Raw Pink Garnet",
 
   "block.tutorialmod.pink_garnet_ore": "Pink Garnet Ore",
   "block.tutorialmod.pink_garnet_deepslate_ore": "Pink Garnet Deepslate Ore",
+  "block.tutorialmod.dahlia":"Dahlia",
+  "item.tutorialmod.melon_popsicle": "Melon Popsicle",
 
+  "block.tutorialmod.forget_me_not":"Forget Me Not",
+  "block.tutorialmod.spruce_chair":"Spruce Chair",
+  "block.tutorialmod.apple_pie":"Apple Pie",
+  "item.tutorialmod.apple_pie_item":"Apple Pie",
+
+
+  "block.tutorialmod.cherry_barrel":"Cherry Barrel",
+  "block.tutorialmod.mangrove_barrel":"Mangrove Barrel",
+
+"block.tutorialmod.spruce_chair": "Spruce Chair",
+
+
+
+
+  "item.tutorialmod.star_cookie_cutter": "Star Cookie Cutter",
+  "item.tutorialmod.circle_cookie_cutter": "Circle Cookie Cutter",
+  "item.tutorialmod.sugar_cookie": "Sugar Cookie",
+  "item.tutorialmod.blue_sugar_cookie": "Blue Sugar Cookie",
+  "item.tutorialmod.blue_royal_frosting": "Blue Royal Frosting",
+
+
+  "item.tutorialmod.light_blue_sugar_cookie": "Light Blue Sugar Cookie",
+
+  "item.tutorialmod.lime_sugar_cookie": "Lime Sugar Cookie",
+
+  "item.tutorialmod.light_blue_royal_frosting": "Light Blue Royal Frosting",
+
+  "item.tutorialmod.lime_royal_frosting": "Lime Royal Frosting",
 
   "item.tutorialmod.lilyfish": "Lilyfish",
   "item.tutorialmod.tomato": "Tomato",
@@ -29,7 +61,12 @@
   "item.tutorialmod.rope": "Rope",
   "item.tutorialmod.stacked_raw_gold_blocks": "Stacked Raw Gold Blocks",
 
-
+  "item.tutorialmod.cranberry": "Cranberry",
+  "block.tutorialmod.sakura_planks": "Sakura Planks",
+  "block.tutorialmod.sakura_hanging_sign": "Sakura Hanging Sign",
+  "block.tutorialmod.sakura_stairs": "Sakura Stairs",
+ "block.tutorialmod.sakura_slab":"Sakura Slab",
+  "block.tutorialmod.sakura_wall_sign": "Sakura Wall Sign",
 
   "block.tutorialmod.oak_glass_trapdoor": "Oak Glass Trapdoor",
   "block.tutorialmod.cherry_glass_trapdoor": "Cherry Glass Trapdoor",

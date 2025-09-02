@@ -1,5 +1,6 @@
 // 1.21.6	-999999999-01-01T00:00:00	Tutorial Mod/Block Loot Tables
 8aa7d235b6ad2ac5d14c247b838dd3eaeed53f3c data/tutorialmod/loot_table/blocks/cauliflower.json
+7a854e8c10e066d8653859ce7d6fc439b0ad0540 data/tutorialmod/loot_table/blocks/cranberry_bush.json
 20c1b94f16da89972e44952293dc87c35d46d12c data/tutorialmod/loot_table/blocks/pink_garnet_block.json
 a8a175045f0d3d679e9afac5111d25b6d0b78ab7 data/tutorialmod/loot_table/blocks/pink_garnet_deepslate_ore.json
 81e1cfbc4d86d3fd0189a0c8ea6ecf867f65d766 data/tutorialmod/loot_table/blocks/pink_garnet_ore.json
