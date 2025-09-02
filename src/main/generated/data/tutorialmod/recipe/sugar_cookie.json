@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "A": "minecraft:sugar",
+    "D": "minecraft:wheat"
+  },
+  "pattern": [
+    "ADD",
+    "   ",
+    "   "
+  ],
+  "result": {
+    "count": 8,
+    "id": "tutorialmod:sugar_cookie"
+  }
+}
