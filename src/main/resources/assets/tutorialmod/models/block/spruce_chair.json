@@ -1,5 +1,11 @@
 {
 	"credit": "Model by MrCrayfish (https://twitter.com/MrCrayfish) using Blockbench. All Rights Reserved.",
+	"texture_size": [64, 64],
+	"textures": {
+		"0": "tutorialmod:block/spruce_chair",
+		"particle": "tutorialmod:block/chair"
+	},
+
 	"elements": [
 		{
 			"from": [2, 0, 12],

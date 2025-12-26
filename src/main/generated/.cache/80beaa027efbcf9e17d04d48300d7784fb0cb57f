@@ -1,4 +1,5 @@
-// 1.21.6	-999999999-01-01T00:00:00	Tutorial Mod/Tags for minecraft:block
-cc25c4829523fed5e9c48d3ee65f27f0ca96846a data/minecraft/tags/block/mineable/pickaxe.json
+// 1.21.10	-999999999-01-01T00:00:00	Tutorial Mod/Tags for minecraft:block
+35133e95f1c8fdd7a1c21afcc231fc0bffefb9a8 data/minecraft/tags/block/logs_that_burn.json
+cfaff415e44c6f2fde1f18d53a0f2f111beda4df data/minecraft/tags/block/mineable/pickaxe.json
 8c81a4cf41b67a57b7b24b914ffc86a0e52fbe80 data/tutorialmod/tags/block/barn_trapdoors.json
 d3bd400e77e0d62f169abc646795ea3b701a2498 data/tutorialmod/tags/block/glass_trapdoors.json

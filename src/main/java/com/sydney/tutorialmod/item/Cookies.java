@@ -17,6 +17,27 @@ public class Cookies {
             .registryKey(RegistryKey.of(RegistryKeys.ITEM, Identifier.of(TutorialMod.MOD_ID, "lime_sugar_cookie")))
             .food(ModFoodComponents.SUGAR_COOKIE)));
 
+    public static final Item BLUE_SUGAR_COOKIE = registerItem("blue_sugar_cookie", new Item(new Item.Settings()
+            .registryKey(RegistryKey.of(RegistryKeys.ITEM, Identifier.of(TutorialMod.MOD_ID, "blue_sugar_cookie")))
+            .food(ModFoodComponents.SUGAR_COOKIE)));
+
+
+
+
+    public static final Item ORANGE_SUGAR_COOKIE = registerItem("orange_sugar_cookie", new Item(new Item.Settings()
+            .registryKey(RegistryKey.of(RegistryKeys.ITEM, Identifier.of(TutorialMod.MOD_ID, "orange_sugar_cookie")))
+            .food(ModFoodComponents.SUGAR_COOKIE)));
+
+
+
+    public static final Item YELLOW_SUGAR_COOKIE = registerItem("yellow_sugar_cookie", new Item(new Item.Settings()
+            .registryKey(RegistryKey.of(RegistryKeys.ITEM, Identifier.of(TutorialMod.MOD_ID, "yellow_sugar_cookie")))
+            .food(ModFoodComponents.SUGAR_COOKIE)));
+
+
+
+
+
 
 
 

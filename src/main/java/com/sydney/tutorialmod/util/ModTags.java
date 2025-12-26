@@ -26,7 +26,7 @@ public class ModTags {
     public static class Items {
         public static final TagKey<Item> TRANSFORMABLE_ITEMS = createTag("transformable_items");
         public static final TagKey<Item> PINK_GARNET_REPAIR = createTag("pink_garnet_repair");
-
+        public static final TagKey<Item> BARRELS = createTag("barrels");
 
 
         private static TagKey<Item> createTag(String name) {

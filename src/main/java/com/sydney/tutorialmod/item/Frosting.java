@@ -11,6 +11,25 @@ import net.minecraft.util.Identifier;
 public class Frosting {
     public static final Item LIGHT_BLUE_ROYAL_FROSTING = registerItem("light_blue_royal_frosting", new TubeItem(new Item.Settings() .registryKey(RegistryKey.of(RegistryKeys.ITEM,Identifier.of(TutorialMod.MOD_ID,"light_blue_royal_frosting")))
             .maxDamage(8).maxCount(1)));
+    public static final Item BLUE_ROYAL_FROSTING = registerItem("blue_royal_frosting", new TubeItem(new Item.Settings() .registryKey(RegistryKey.of(RegistryKeys.ITEM,Identifier.of(TutorialMod.MOD_ID,"blue_royal_frosting")))
+            .maxDamage(8).maxCount(1)));
+
+
+    public static final Item YELLOW_ROYAL_FROSTING = registerItem("yellow_royal_frosting", new TubeItem(new Item.Settings() .registryKey(RegistryKey.of(RegistryKeys.ITEM,Identifier.of(TutorialMod.MOD_ID,"yellow_royal_frosting")))
+            .maxDamage(8).maxCount(1)));
+
+    public static final Item ORANGE_ROYAL_FROSTING = registerItem("orange_royal_frosting", new TubeItem(new Item.Settings() .registryKey(RegistryKey.of(RegistryKeys.ITEM,Identifier.of(TutorialMod.MOD_ID,"orange_royal_frosting")))
+            .maxDamage(8).maxCount(1)));
+
+
+
+
+
+
+
+
+
+
 
 
     public static final Item LIME_ROYAL_FROSTING = registerItem("lime_royal_frosting", new TubeItem(new Item.Settings() .registryKey(RegistryKey.of(RegistryKeys.ITEM,Identifier.of(TutorialMod.MOD_ID,"lime_royal_frosting")))

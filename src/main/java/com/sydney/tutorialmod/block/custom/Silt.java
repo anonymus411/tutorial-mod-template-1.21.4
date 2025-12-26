@@ -1,7 +1,7 @@
 package com.sydney.tutorialmod.block.custom;
 
 import com.sydney.tutorialmod.TutorialMod;
-import com.sydney.tutorialmod.sound.ModSounds;
+
 import net.fabricmc.fabric.api.itemgroup.v1.ItemGroupEvents;
 import net.minecraft.block.AbstractBlock;
 import net.minecraft.block.Block;
@@ -15,7 +15,7 @@ import net.minecraft.registry.RegistryKeys;
 import net.minecraft.sound.BlockSoundGroup;
 import net.minecraft.util.Identifier;
 
-import static com.sydney.tutorialmod.sound.ModSounds.SILT_BLOCK_PLACE;
+
 
 public class Silt {
 
@@ -25,13 +25,13 @@ public class Silt {
     public static final Block SILT = registerBlock("silt",
             new Block(AbstractBlock.Settings.create().registryKey(RegistryKey.of(RegistryKeys.BLOCK, Identifier.of(TutorialMod.MOD_ID, "silt")))
                     .strength(1f)
-                    .requiresTool().sounds(ModSounds.SILT)));
+                    .requiresTool()));
 
 
     public static final Block SILT_BRICKS = registerBlock("silt_bricks",
             new Block(AbstractBlock.Settings.create().registryKey(RegistryKey.of(RegistryKeys.BLOCK, Identifier.of(TutorialMod.MOD_ID, "silt")))
                     .strength(3f)
-                    .requiresTool().sounds(SILT_BLOCK_PLACE)));
+                    .requiresTool()));
 
 
     private static Block registerBlock(String name, Block block) {
