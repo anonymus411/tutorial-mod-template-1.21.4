@@ -1,5 +1,7 @@
 package com.sydney.tutorialmod.datagen;
 
+import com.sun.source.tree.Tree;
+import com.sydney.tutorialmod.block.BellpepperCropBlock;
 import com.sydney.tutorialmod.block.ModBlocks;
 import com.sydney.tutorialmod.block.custom.*;
 import com.sydney.tutorialmod.item.ModItems;
@@ -8,6 +10,7 @@ import net.fabricmc.fabric.api.datagen.v1.provider.FabricBlockLootTableProvider;
 import net.minecraft.block.Block;
 import net.minecraft.enchantment.Enchantment;
 import net.minecraft.enchantment.Enchantments;
+import net.minecraft.item.FishingRodItem;
 import net.minecraft.item.Item;
 import net.minecraft.loot.LootPool;
 import net.minecraft.loot.LootTable;
@@ -35,7 +38,13 @@ public class ModLootTableProvider extends FabricBlockLootTableProvider {
 
         addDrop(Pink_Garnet_Ore.PINK_GARNET_BLOCK);
         addDrop(Pink_Garnet_Ore.RAW_PINK_GARNET_BLOCK);
-addDrop(ModBlocks.STACKED_RAW_GOLD_BLOCKS);
+
+
+        BlockStatePropertyLootCondition.Builder builder2 = BlockStatePropertyLootCondition.builder(ModBlocks.BELL_PEPPERS)
+                .properties(StatePredicate.Builder.create().exactMatch(BellpepperCropBlock.AGE, BellpepperCropBlock.MAX_AGE));
+    this.addDrop(ModBlocks.BELL_PEPPERS, this.cropDrops(ModBlocks.BELL_PEPPERS, ModItems.BELL_PEPPER_GREEN, ModItems.BELL_PEPPER_SEEDS, builder2));
+
+
 
 
 
@@ -73,6 +82,25 @@ addDrop(ModBlocks.STACKED_RAW_GOLD_BLOCKS);
                                 .apply(ApplyBonusLootFunction.uniformBonusCount(impl.getOrThrow(Enchantments.FORTUNE))))));
 
 
+        this.addDrop(ModBlocks.CRANBERRY_BUSH,
+                block -> this.applyExplosionDecay(
+                        block, LootTable.builder().pool(LootPool.builder().conditionally(
+                                                BlockStatePropertyLootCondition.builder(ModBlocks.CRANBERRY_BUSH).properties(StatePredicate.Builder.create().exactMatch(CranberryPlant.AGE, 3))
+                                        )
+                                        .with(ItemEntry.builder(ModItems.CRANBERRY))
+                                        .apply(SetCountLootFunction.builder(UniformLootNumberProvider.create(2.0F, 3.0F)))
+                                        .apply(ApplyBonusLootFunction.uniformBonusCount(impl.getOrThrow(Enchantments.FORTUNE)))
+                        ).pool(LootPool.builder().conditionally(
+                                        BlockStatePropertyLootCondition.builder(ModBlocks.CRANBERRY_BUSH).properties(StatePredicate.Builder.create().exactMatch(CranberryPlant.AGE, 2))
+                                ).with(ItemEntry.builder(ModItems.CRANBERRY))
+                                .apply(SetCountLootFunction.builder(UniformLootNumberProvider.create(1.0F, 2.0F)))
+                                .apply(ApplyBonusLootFunction.uniformBonusCount(impl.getOrThrow(Enchantments.FORTUNE))))));
+
+
+
+
+
+
         addDrop(Pink_Garnet_Ore.PINK_GARNET_ORE, oreDrops(Pink_Garnet_Ore.PINK_GARNET_ORE, ModItems.RAW_PINK_GARNET));
         addDrop(Pink_Garnet_Ore.PINK_GARNET_DEEPSLATE_ORE, multipleOreDrops(Pink_Garnet_Ore.PINK_GARNET_DEEPSLATE_ORE, ModItems.RAW_PINK_GARNET, 3, 7));
 //silt
@@ -81,9 +109,6 @@ addDrop(ModBlocks.STACKED_RAW_GOLD_BLOCKS);
 
 
 
-        BlockStatePropertyLootCondition.Builder builder2 = BlockStatePropertyLootCondition.builder(ModBlocks.CAULIFLOWER)
-                .properties(StatePredicate.Builder.create().exactMatch(Cauliflower.AGE, Cauliflower.MAX_AGE));
-        this.addDrop(ModBlocks.CAULIFLOWER, this.cropDrops(ModBlocks.CAULIFLOWER, ModItems.CAULIFLOWER, ModItems.CAULIFLOWER_SEEDS, builder2));
     }
 
     public LootTable.Builder multipleOreDrops(Block drop, Item item, float minDrops, float maxDrops) {

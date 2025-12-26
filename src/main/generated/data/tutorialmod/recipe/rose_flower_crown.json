@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "building",
+  "key": {
+    "Q": "minecraft:string",
+    "R": "tutorialmod:rose"
+  },
+  "pattern": [
+    "RQR",
+    "Q Q",
+    "RQR"
+  ],
+  "result": {
+    "count": 1,
+    "id": "tutorialmod:rose_flower_crown"
+  }
+}

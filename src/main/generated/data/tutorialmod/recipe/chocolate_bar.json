@@ -1,0 +1,18 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "D": "minecraft:milk_bucket",
+    "E": "minecraft:cocoa_beans",
+    "F": "minecraft:sugar"
+  },
+  "pattern": [
+    "DE ",
+    "FE ",
+    "   "
+  ],
+  "result": {
+    "count": 4,
+    "id": "tutorialmod:chocolate_bar"
+  }
+}

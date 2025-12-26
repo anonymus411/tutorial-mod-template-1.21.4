@@ -1,0 +1,18 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "A": "minecraft:sugar",
+    "D": "minecraft:orange_dye",
+    "E": "minecraft:egg"
+  },
+  "pattern": [
+    "ADE",
+    "   ",
+    "   "
+  ],
+  "result": {
+    "count": 1,
+    "id": "tutorialmod:orange_royal_frosting"
+  }
+}

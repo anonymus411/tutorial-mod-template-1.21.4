@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    "tutorialmod:sugar_cookie",
+    "tutorialmod:blue_royal_frosting"
+  ],
+  "result": {
+    "count": 1,
+    "id": "tutorialmod:blue_sugar_cookie"
+  }
+}

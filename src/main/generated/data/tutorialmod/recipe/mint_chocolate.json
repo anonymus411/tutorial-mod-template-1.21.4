@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "D": "tutorialmod:chocolate_bar",
+    "E": "tutorialmod:mint_leaves"
+  },
+  "pattern": [
+    "DE ",
+    "   ",
+    "   "
+  ],
+  "result": {
+    "count": 1,
+    "id": "tutorialmod:mint_chocolate"
+  }
+}

@@ -1,0 +1,20 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "B": "minecraft:sugar",
+    "C": "minecraft:glow_berries",
+    "D": "minecraft:bowl",
+    "E": "minecraft:milk_bucket",
+    "F": "tutorialmod:ice_cubes"
+  },
+  "pattern": [
+    "DCE",
+    "FB ",
+    "   "
+  ],
+  "result": {
+    "count": 1,
+    "id": "tutorialmod:glowberry_ice_cream"
+  }
+}

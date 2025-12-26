@@ -1,6 +1,7 @@
 package com.sydney.tutorialmod.block.custom;
 
 
+import com.sydney.tutorialmod.TutorialMod;
 import com.sydney.tutorialmod.item.ModItems;
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockState;
@@ -30,7 +31,9 @@ public class Strawberry extends SweetBerryBushBlock {
         final VoxelShape LARGE_SHAPE = Block.createCuboidShape(1.0, 0.0, 1.0, 15.0, 16.0, 15.0);
     }
 
-    public void onEntityCollision(BlockState state, World world,BlockPos pos,Entity entity){}
+    public void onEntityCollision(BlockState state, World world, BlockPos pos, Entity entity) {
+    }
+
     public ItemStack getPickStack(WorldView world, BlockPos pos, BlockState state) {
         return new ItemStack(ModItems.STRAWBERRY);
 
@@ -51,13 +54,20 @@ public class Strawberry extends SweetBerryBushBlock {
         } else {
             return super.onUse(state, world, pos, player, hit);
 
-
-
         }
-
-
     }
 }
+
+
+
+
+
+
+
+
+
+
+
 
 
 

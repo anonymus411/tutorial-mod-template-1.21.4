@@ -1,10 +1,10 @@
 package com.sydney.tutorialmod.block;
 
 import com.sydney.tutorialmod.TutorialMod;
-import com.sydney.tutorialmod.block.custom.Cauliflower;
-import com.sydney.tutorialmod.block.custom.Strawberry;
-import com.sydney.tutorialmod.block.custom.Tomato;
+import com.sydney.tutorialmod.block.custom.*;
 
+
+import com.sydney.tutorialmod.block.custom.FlowerBlock;
 import net.fabricmc.fabric.api.itemgroup.v1.ItemGroupEvents;
 
 import net.minecraft.block.*;
@@ -21,53 +21,87 @@ import net.minecraft.registry.RegistryKeys;
 import net.minecraft.sound.BlockSoundGroup;
 import net.minecraft.util.Identifier;
 
-import static net.minecraft.block.Blocks.createFlowerPotSettings;
+import static net.minecraft.block.Blocks.*;
 
-public class ModBlocks {
 
+public class ModBlocks  {
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    public static final Block BELL_PEPPERS= registerBlockWithoutBlockItem("bell_peppers",
+            new BellpepperCropBlock(AbstractBlock.Settings.create().registryKey(RegistryKey.of(RegistryKeys.BLOCK, Identifier.of(TutorialMod.MOD_ID, "bell_peppers"))).noCollision()
+                    .ticksRandomly().breakInstantly().sounds(BlockSoundGroup.CROP).pistonBehavior(PistonBehavior.DESTROY).mapColor(MapColor.DARK_GREEN)));
 
     public static final Block TOMATO = registerBlockWithoutBlockItem("tomato",
             new Tomato(AbstractBlock.Settings.copy(Blocks.SWEET_BERRY_BUSH)
                     .registryKey(RegistryKey.of(RegistryKeys.BLOCK, Identifier.of(TutorialMod.MOD_ID, "tomato")))));
 
-    public static final Block CAULIFLOWER= registerBlockWithoutBlockItem("cauliflower",
-            new Cauliflower(AbstractBlock.Settings.create().registryKey(RegistryKey.of(RegistryKeys.BLOCK, Identifier.of(TutorialMod.MOD_ID, "cauliflower"))).noCollision()
-                    .ticksRandomly().breakInstantly().sounds(BlockSoundGroup.CROP).pistonBehavior(PistonBehavior.DESTROY).mapColor(MapColor.DARK_GREEN)));
+
 
     public static final Block STRAWBERRY = registerBlockWithoutBlockItem("strawberry",
             new Strawberry(AbstractBlock.Settings.copy(Blocks.SWEET_BERRY_BUSH)
                     .registryKey(RegistryKey.of(RegistryKeys.BLOCK, Identifier.of(TutorialMod.MOD_ID, "strawberry")))));
 
 
-    public static final Block DALIAH= registerBlockWithoutBlockItem(
-            "daliah",
-            settings -> new FlowerBlock(StatusEffects.SATURATION, 0.35F, settings),
+    public static final Block CRANBERRY_BUSH = registerBlockWithoutBlockItem("cranberry_bush",
+            new CranberryPlant(AbstractBlock.Settings.copy(Blocks.SWEET_BERRY_BUSH)
+                    .registryKey(RegistryKey.of(RegistryKeys.BLOCK, Identifier.of(TutorialMod.MOD_ID, "cranberry_bush")))));
+
+
+    public static final Block DAHLIA = registerBlock("dahlia", new FlowerBlock(StatusEffects.SATURATION, 0.35F,
             AbstractBlock.Settings.create()
                     .mapColor(MapColor.DARK_GREEN)
                     .noCollision()
                     .breakInstantly()
                     .sounds(BlockSoundGroup.GRASS)
                     .offset(AbstractBlock.OffsetType.XZ)
-                    .pistonBehavior(PistonBehavior.DESTROY));
-
-    public static final Block POTTED_DALIAH = registerBlockWithoutBlockItem(
-            "daliah,",
-
-            settings -> new FlowerPotBlock(DALIAH, settings), createFlowerPotSettings());
+                    .pistonBehavior(PistonBehavior.DESTROY)
+                    .registryKey(RegistryKey.of(RegistryKeys.BLOCK, Identifier.of(TutorialMod.MOD_ID, "dahlia")))));
 
 
+    public static final Block POTTED_DAHLIA = registerBlock("potted_dahlia", new FlowerPotBlock(ModBlocks.DAHLIA, createFlowerPotSettings()
+    .registryKey(RegistryKey.of(RegistryKeys.BLOCK, Identifier.of(TutorialMod.MOD_ID, "potted_dahlia")))));
 
 
 
+    public static final Block BLUEBELL = registerBlock("bluebell", new FlowerBlock(StatusEffects.SATURATION, 0.35F,
+            AbstractBlock.Settings.create()
+                    .mapColor(MapColor.DARK_GREEN)
+                    .noCollision()
+                    .breakInstantly()
+                    .sounds(BlockSoundGroup.GRASS)
+                    .offset(AbstractBlock.OffsetType.XZ)
+                    .pistonBehavior(PistonBehavior.DESTROY)
+                    .registryKey(RegistryKey.of(RegistryKeys.BLOCK, Identifier.of(TutorialMod.MOD_ID, "bluebell")))));
 
 
-    public static final Block STACKED_RAW_GOLD_BLOCKS = registerBlock("stacked_raw_gold_blocks",
-            new Block(AbstractBlock.Settings.create().registryKey(RegistryKey.of(RegistryKeys.BLOCK, Identifier.of(TutorialMod.MOD_ID, "raw_pink_garnet_block")))
-                    .strength(3f).requiresTool().sounds(BlockSoundGroup.AMETHYST_BLOCK)));
+
+    public static final Block POTTED_BLUEBELL = registerBlock("potted_bluebell", new FlowerPotBlock(ModBlocks.BLUEBELL, createFlowerPotSettings()
+            .registryKey(RegistryKey.of(RegistryKeys.BLOCK, Identifier.of(TutorialMod.MOD_ID, "potted_bluebell")))));
 
 
 
-       public static final Block OAK_GlASS_TRAPDOOR = registerBlock("oak_glass_trapdoor",
+
+
+
+    public static final Block OAK_GlASS_TRAPDOOR = registerBlock("oak_glass_trapdoor",
             new TrapdoorBlock(BlockSetType.OAK, AbstractBlock.Settings.create().registryKey(RegistryKey.of(RegistryKeys.BLOCK, Identifier.of(TutorialMod.MOD_ID, "oak_glass_trapdoor")))
                     .strength(2f).requiresTool().nonOpaque()));
     public static final Block CHERRY_GlASS_TRAPDOOR = registerBlock("cherry_glass_trapdoor",
@@ -76,12 +110,33 @@ public class ModBlocks {
 
 
 
-    public static final Block CHERRY_BARN_TRAPDOOR = registerBlock("cherry_barn_trapdoor",
+
+
+  public   static final Block CHERRY_BARN_TRAPDOOR = registerBlock("cherry_barn_trapdoor",
             new TrapdoorBlock(BlockSetType.CHERRY, AbstractBlock.Settings.create().registryKey(RegistryKey.of(RegistryKeys.BLOCK, Identifier.of(TutorialMod.MOD_ID, "cherry_glass_trapdoor")))
                     .strength(2f).requiresTool().nonOpaque()));
 
 
-    private static Block registerBlockWithoutBlockItem(String name, Block block) {
+
+    public static final Block SAWMILL  = registerBlock("sawmill", SawmillBlock::new);
+
+
+
+
+
+
+
+
+
+
+    private static Block registerBlockWithoutBlockItem(String name, Block block)
+
+
+
+
+
+
+    {
 
 
         return Registry.register(Registries.BLOCK, Identifier.of(TutorialMod.MOD_ID, name), block);
