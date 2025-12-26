@@ -1,0 +1,18 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "A": "minecraft:egg",
+    "D": "minecraft:wheat",
+    "F": "minecraft:glow_berries"
+  },
+  "pattern": [
+    "DD ",
+    "AF ",
+    "   "
+  ],
+  "result": {
+    "count": 2,
+    "id": "tutorialmod:glowberry_cubecake"
+  }
+}

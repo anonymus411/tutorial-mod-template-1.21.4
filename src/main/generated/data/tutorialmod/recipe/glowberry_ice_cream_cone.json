@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "D": "tutorialmod:glowberry_ice_cream",
+    "E": "tutorialmod:wafer_cone"
+  },
+  "pattern": [
+    "DE ",
+    "EE ",
+    "   "
+  ],
+  "result": {
+    "count": 3,
+    "id": "tutorialmod:glowberry_ice_cream_cone"
+  }
+}

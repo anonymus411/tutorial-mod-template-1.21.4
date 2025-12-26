@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    "tutorialmod:green_apple",
+    "minecraft:egg",
+    "minecraft:sugar"
+  ],
+  "result": {
+    "count": 1,
+    "id": "tutorialmod:green_apple_pie"
+  }
+}

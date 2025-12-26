@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "tutorialmod:wafer_cone"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    },
+    "has_wafer": {
+      "conditions": {
+        "items": [
+          {
+            "items": "tutorialmod:wafer_cone"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_wafer"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "tutorialmod:wafer_cone"
+    ]
+  }
+}
